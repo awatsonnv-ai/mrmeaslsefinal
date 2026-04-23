@@ -21,11 +21,16 @@ async function fetchMeaslesData() {
 
     console.log(`Processing ${csvData.length} county records...`);
 
-    // Aggregate cases by state
+    // Aggregate cases by state - only count 2026 data
     const stateCases = {};
     let latestDate = null;
 
     csvData.forEach(record => {
+      // Only process 2026 data
+      if (!record.date || !record.date.startsWith('2026')) {
+        return;
+      }
+
       // Extract state from location_name (format: "County, State")
       const locationParts = record.location_name.split(', ');
       if (locationParts.length >= 2) {
