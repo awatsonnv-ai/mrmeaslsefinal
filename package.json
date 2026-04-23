@@ -1,0 +1,13 @@
+{
+  "name": "mrmeaslsefinal",
+  "version": "1.0.0",
+  "description": "Mr. Measles website with automated data updates",
+  "main": "update-measles-data.js",
+  "scripts": {
+    "update-data": "node update-measles-data.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
