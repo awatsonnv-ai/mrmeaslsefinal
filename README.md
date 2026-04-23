@@ -15,16 +15,25 @@ This website automatically updates measles case data every Thursday using GitHub
 - GitHub Actions workflow setup
 - HTML update script
 - Password protection
-- Basic automation framework
+- **Real Johns Hopkins data integration** - fetches from CSSEGISandData/measles_data
+- County-level data aggregation by state
+- Automated weekly updates every Thursday
 
 🔄 **In Progress:**
-- Data source integration (Johns Hopkins IVAC measles tracker)
+- Data source monitoring and validation
 
 ## Data Sources
 
-The site currently references:
-- **Primary Source**: https://publichealth.jhu.edu/ivac/resources/us-measles-tracker
-- **Backup Source**: CDC measles surveillance data
+The site now uses **real-time data** from:
+- **Primary Source**: Johns Hopkins CSSEGISandData measles repository
+- **Data URL**: https://github.com/CSSEGISandData/measles_data
+- **Data File**: measles_county_all_updates.csv (county-level data aggregated by state)
+- **Update Frequency**: Repository updated regularly, our site updates Thursdays
+
+**Data Processing:**
+- Fetches county-level measles case data
+- Aggregates cases by state
+- Updates map, statistics, and timestamps automatically
 
 ## Implementation Notes
 
@@ -37,11 +46,13 @@ The Johns Hopkins site uses Cloudflare protection, making direct scraping diffic
 4. **Alternative Sources**: Use WHO or other international health organization data
 
 ### Current Script Behavior
-The `update-measles-data.js` script currently:
-- Simulates data updates for testing
-- Updates the `CASES` object in `index.html`
-- Updates statistics displays
-- Updates the "Updated" timestamp
+The `update-measles-data.js` script:
+- Fetches real measles case data from Johns Hopkins GitHub repository
+- Parses county-level CSV data and aggregates by state
+- Updates the `CASES` object in `index.html` with current data
+- Updates statistics displays (total cases, reporting states)
+- Updates the "Updated" timestamp with current date
+- Uses data from CSSEGISandData/measles_data repository
 
 ## Manual Testing
 
