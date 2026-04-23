@@ -102,16 +102,27 @@ async function updateHTML(measlesData) {
   const totalCases = measlesData.totalCases;
   const reportingStates = measlesData.reportingStates;
 
-  // Update total cases
+  // Update total cases - match any number in the cases stat
   htmlContent = htmlContent.replace(
-    /<div class="map-stat-num">1,653<\/div><div class="map-stat-label">Cases in 2026<br>So Far<\/div><\/div>/,
+    /<div class="map-stat-num">[0-9,]+<\/div><div class="map-stat-label">Cases in 2026<br>So Far<\/div><\/div>/,
     `<div class="map-stat-num">${totalCases.toLocaleString()}</div><div class="map-stat-label">Cases in 2026<br>So Far</div></div>`
   );
 
-  // Update jurisdictions reporting
+  // Update jurisdictions reporting - match any number in the jurisdictions stat
   htmlContent = htmlContent.replace(
-    /<div class="map-stat-num">33<\/div><div class="map-stat-label">Jurisdictions<br>Reporting<\/div><\/div>/,
+    /<div class="map-stat-num">[0-9]+<\/div><div class="map-stat-label">Jurisdictions<br>Reporting<\/div><\/div>/,
     `<div class="map-stat-num">${reportingStates}</div><div class="map-stat-label">Jurisdictions<br>Reporting</div></div>`
+  );
+
+  // Update South Carolina epicenter - find the state with highest cases
+  const epicenterState = Object.keys(measlesData.cases).reduce((a, b) =>
+    measlesData.cases[a] > measlesData.cases[b] ? a : b
+  );
+  const epicenterCases = measlesData.cases[epicenterState];
+
+  htmlContent = htmlContent.replace(
+    /<div class="map-stat-num">[0-9]+<\/div><div class="map-stat-label">[^<]*<br>The Epicenter<\/div><\/div>/,
+    `<div class="map-stat-num">${epicenterCases}</div><div class="map-stat-label">${epicenterState}<br>The Epicenter</div></div>`
   );
 
   // Update the source timestamp
