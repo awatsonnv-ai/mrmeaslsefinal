@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+const https = require('https');
+const csv = require('csv-parser');
 const fs = require('fs');
 const path = require('path');
 
@@ -7,74 +9,80 @@ const path = require('path');
 // TODO: Implement actual scraping from Johns Hopkins source
 // This function can be updated to fetch from different sources
 async function fetchMeaslesData() {
-  console.log('Fetching measles data from CDC/Johns Hopkins sources...');
+  console.log('Fetching measles data from Johns Hopkins GitHub repository...');
 
-  // Try to fetch from CDC first, fallback to Johns Hopkins, then use cached data
   try {
-    // For now, we'll simulate fetching updated data
-    // In production, this would scrape or API call to get real data
-    const currentDate = new Date();
-    const mockNewCases = Math.floor(Math.random() * 50) + 10; // Simulate some new cases
+    // Fetch the county-level data from Johns Hopkins GitHub repo
+    const csvData = await fetchCSV('https://raw.githubusercontent.com/CSSEGISandData/measles_data/main/measles_county_all_updates.csv');
 
-    const cases = {
-      "South Carolina": 667,
-      "Utah": 408,
-      "Texas": 176,
-      "Florida": 129,
-      "New Mexico": 42,
-      "Arizona": 38,
-      "California": 28,
-      "Colorado": 22,
-      "Illinois": 18,
-      "New York": 16,
-      "Minnesota": 14,
-      "Michigan": 12,
-      "Kentucky": 11,
-      "Georgia": 10,
-      "Massachusetts": 8,
-      "Missouri": 7,
-      "Maine": 6,
-      "Montana": 5,
-      "Nebraska": 5,
-      "Idaho": 4,
-      "Alaska": 3,
-      "Pennsylvania": 3,
-      "Tennessee": 3,
-      "Ohio": 3,
-      "Washington": 2,
-      "Oregon": 2,
-      "Arkansas": 2,
-      "Louisiana": 2,
-      "North Carolina": 2,
-      "Indiana": 2,
-      "Virginia": 1,
-      "Kansas": 1,
-      "Maryland": 1
-    };
+    if (!csvData || csvData.length === 0) {
+      throw new Error('No data received from Johns Hopkins repository');
+    }
 
-    // Simulate adding some new cases to a random state
-    const states = Object.keys(cases);
-    const randomState = states[Math.floor(Math.random() * states.length)];
-    cases[randomState] += mockNewCases;
+    console.log(`Processing ${csvData.length} county records...`);
+
+    // Aggregate cases by state
+    const stateCases = {};
+    let latestDate = null;
+
+    csvData.forEach(record => {
+      // Extract state from location_name (format: "County, State")
+      const locationParts = record.location_name.split(', ');
+      if (locationParts.length >= 2) {
+        const stateName = locationParts[1];
+        const caseCount = parseInt(record.value || 0);
+
+        if (caseCount > 0) {
+          stateCases[stateName] = (stateCases[stateName] || 0) + caseCount;
+        }
+
+        // Track the latest date
+        if (!latestDate || record.date > latestDate) {
+          latestDate = record.date;
+        }
+      }
+    });
 
     // Calculate totals
-    const totalCases = Object.values(cases).reduce((sum, count) => sum + count, 0);
-    const reportingStates = Object.keys(cases).length;
+    const totalCases = Object.values(stateCases).reduce((sum, count) => sum + count, 0);
+    const reportingStates = Object.keys(stateCases).length;
 
-    console.log(`Simulated update: Added ${mockNewCases} cases to ${randomState}`);
+    console.log(`Found ${totalCases} total cases across ${reportingStates} states`);
+    console.log('States with cases:', Object.keys(stateCases).join(', '));
 
     return {
-      cases,
+      cases: stateCases,
       totalCases,
       reportingStates,
-      lastUpdated: currentDate.toISOString(),
-      source: 'https://publichealth.jhu.edu/ivac/resources/us-measles-tracker'
+      lastUpdated: new Date().toISOString(),
+      source: 'https://github.com/CSSEGISandData/measles_data',
+      latestDataDate: latestDate
     };
 
   } catch (error) {
-    console.error('Error fetching data:', error);
-    throw new Error('Failed to fetch measles data from sources');
+    console.error('Error fetching data from Johns Hopkins:', error);
+    throw new Error('Failed to fetch measles data from Johns Hopkins GitHub repository');
   }
+}
+
+// Helper function to fetch and parse CSV data
+function fetchCSV(url) {
+  return new Promise((resolve, reject) => {
+    const results = [];
+
+    https.get(url, (response) => {
+      if (response.statusCode !== 200) {
+        reject(new Error(`HTTP ${response.statusCode}: ${response.statusMessage}`));
+        return;
+      }
+
+      response
+        .pipe(csv())
+        .on('data', (data) => results.push(data))
+        .on('end', () => resolve(results))
+        .on('error', reject);
+    }).on('error', reject);
+  });
 }
 
 async function updateHTML(measlesData) {
