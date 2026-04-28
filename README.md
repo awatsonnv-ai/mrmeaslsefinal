@@ -14,7 +14,7 @@ This website automatically updates measles case data every Thursday using GitHub
 ✅ **Completed:**
 - GitHub Actions workflow setup
 - HTML update script
-- Password protection
+- Password protection removed for public launch
 - **Real Johns Hopkins data integration** - fetches from CSSEGISandData/measles_data
 - County-level data aggregation by state
 - Automated weekly updates every Thursday
@@ -79,3 +79,33 @@ The site will automatically update every Thursday. If you need to trigger an upd
 - [ ] Add email notifications for update failures
 - [ ] Implement data quality checks
 - [ ] Add historical data tracking
+
+## Congress ZIP Lookup
+
+This repo now includes a ZIP/ZCTA-based Congress lookup for the "Contact Your Representatives" section.
+
+### What was added
+
+- `congress/scripts/build-congress-data.mjs` builds current member and ZIP lookup data.
+- `congress/data/` stores generated JSON files after the build runs.
+- `assets/js/congress-lookup.js` powers the front-end ZIP lookup.
+- The site copy now notes that some ZIP codes span multiple House districts and may require address/district confirmation.
+- Member records include party status via the `party` field, plus `caucus` where available.
+
+### Build the Congress lookup data
+
+```bash
+npm run build:congress
+```
+
+Generated files:
+
+- `congress/data/members_current.json`
+- `congress/data/zip_to_districts.json`
+- `congress/data/zip_to_members.json`
+- `congress/data/member_office_zipcodes.json`
+- `congress/data/metadata.json`
+
+### ZIP-code caveat
+
+The lookup uses Census ZIP Code Tabulation Areas (ZCTAs), not full street-address geocoding. Some 5-digit ZIP codes overlap multiple congressional districts. When that happens, the lookup returns all matching House representatives and flags the result as ambiguous.

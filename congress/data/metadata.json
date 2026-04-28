@@ -1,0 +1,9 @@
+{
+  "generatedAt": "2026-04-28T14:37:25.135Z",
+  "sources": {
+    "LEGISLATORS_URL": "https://unitedstates.github.io/congress-legislators/legislators-current.json",
+    "OFFICES_URL": "https://unitedstates.github.io/congress-legislators/legislators-district-offices.json",
+    "CD_ZCTA_URL": "https://www2.census.gov/geo/docs/maps-data/data/rel2020/cd-sld/tab20_cd11920_zcta520_natl.txt"
+  },
+  "note": "ZIP lookup is based on Census ZCTAs. Some ZIP/ZCTA values map to multiple House districts; use address-level confirmation for final delivery when necessary."
+}
