@@ -1,5 +1,5 @@
 (function () {
-  const DATA_URL = 'congress/data/zip/.json';
+  const DATA_URL = `congress/data/zip/${zip[0]}.json`;
   let lookupPromise = null;
 
   function escapeHtml(value) {
