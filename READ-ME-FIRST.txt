@@ -1,12 +1,24 @@
-Upload these files into the ROOT of your GitHub repo, replacing existing files:
+This patch contains four files:
 
+1) .github/workflows/update-measles-data.yml
+2) update-measles-data.yml  (visible backup copy of the same workflow file)
+3) update-measles-data.js
+4) .gitignore
+
+IMPORTANT: macOS Finder may hide dot-files and dot-folders. The .github folder and .gitignore file may not appear unless you press Command + Shift + . in Finder.
+
+Copy files to these exact paths in your repo:
+
+- .github/workflows/update-measles-data.yml
+- update-measles-data.js
+- .gitignore
+
+If Finder makes the .github folder confusing, open GitHub in the browser, go to:
 .github/workflows/update-measles-data.yml
-update-measles-data.js
-.gitignore
+and replace its contents with the visible file named update-measles-data.yml in this patch.
 
-Important: after uploading, open .github/workflows/update-measles-data.yml on GitHub and confirm it contains:
+After copying, commit and push. On GitHub, confirm .github/workflows/update-measles-data.yml says updated just now and includes:
+- permissions: contents: write, issues: write
 - git add index.html
 - git pull --rebase origin main
 - git push origin HEAD:main
-
-If the workflow log still says 'git add .' or deletes node_modules/.DS_Store, GitHub is still running the OLD workflow file.
