@@ -1,0 +1,12 @@
+Upload these files into the ROOT of your GitHub repo, replacing existing files:
+
+.github/workflows/update-measles-data.yml
+update-measles-data.js
+.gitignore
+
+Important: after uploading, open .github/workflows/update-measles-data.yml on GitHub and confirm it contains:
+- git add index.html
+- git pull --rebase origin main
+- git push origin HEAD:main
+
+If the workflow log still says 'git add .' or deletes node_modules/.DS_Store, GitHub is still running the OLD workflow file.
