@@ -1,0 +1,14 @@
+Replace these files in the root of your GitHub repo:
+
+1. .github/workflows/update-measles-data.yml
+2. update-measles-data.js
+3. .gitignore
+
+Then commit and push.
+
+Important: do not upload node_modules. If node_modules/.DS_Store is tracked, remove it once with:
+  git rm --cached node_modules/.DS_Store
+  git commit -m "Stop tracking node_modules system file"
+  git push
+
+The fixed workflow only stages index.html, rebases before pushing, and has contents/issues permissions.
