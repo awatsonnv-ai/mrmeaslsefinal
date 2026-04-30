@@ -81,8 +81,8 @@ async function fetchMeaslesData() {
   for (const row of rows) {
     if (!row.date || !row.date.startsWith(`${YEAR}-`)) continue;
 
-    // Johns Hopkins measles data includes value types. We only want lab-confirmed cases.
-    if (row.value_type && row.value_type !== 'case_lab-confirmed') continue;
+    // Johns Hopkins measles data includes multiple outcome types. We only want lab-confirmed cases.
+    if (row.outcome_type && row.outcome_type !== 'case_lab-confirmed') continue;
 
     const state = stateFromLocationName(row.location_name);
     if (!state) continue;

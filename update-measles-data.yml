@@ -2,7 +2,7 @@ name: Update Measles Data
 
 on:
   schedule:
-    - cron: "0 12 * * *"
+    - cron: '0 9 * * 4'
   workflow_dispatch:
 
 permissions:
@@ -27,7 +27,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: '20'
 
       - name: Install dependencies
         run: |
