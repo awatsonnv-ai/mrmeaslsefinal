@@ -1,0 +1,13 @@
+{
+  "name": "Mr. Measles for America",
+  "short_name": "Mr. Measles",
+  "description": "Measles is back — running for America in 2026.",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "theme_color": "#000000",
+  "background_color": "#0a1c3a",
+  "display": "standalone",
+  "start_url": "/"
+}
