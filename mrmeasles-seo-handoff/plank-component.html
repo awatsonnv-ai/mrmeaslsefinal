@@ -1,312 +1,69 @@
 <!--
-  ============================================================
-  PLATFORM PLANK MODAL PATTERN
-  ============================================================
-  Each plank is a clickable button on the homepage. Clicking opens a
-  modal overlay containing the full essay. User scrolls within the
-  modal; the page underneath stays still.
+  Expandable platform-plank pattern.
 
-  ============================================================
-  *** CRITICAL FOR SEO — READ THIS FIRST ***
-  ============================================================
+  Why this works for SEO:
+  - Uses the native <details>/<summary> element. Fully accessible to screen readers
+    and keyboard users out of the box.
+  - Google indexes content inside collapsed <details> normally — they confirmed this
+    publicly because the content is technically user-accessible (one click).
+  - This is NOT cloaking. The page renders the same HTML for bots and humans;
+    only the visual default state differs.
+  - Each plank can hold 600+ words of essay, giving the homepage real depth without
+    visually overwhelming a casual visitor who came to laugh at the campaign.
 
-  The essay HTML MUST be present in the initial server-rendered page.
-  Google indexes static HTML; it does NOT click buttons or run "open
-  modal" interactions. If the essay text is fetched or mounted only
-  AFTER the user clicks, Googlebot will never see it and the entire
-  point of writing the essays is wasted.
-
-  Three patterns to AVOID in React / Next.js:
-
-    ❌  dynamic(() => import('./PlankDialog'), { ssr: false })
-         — strips the dialog content from the server render entirely.
-
-    ❌  {isOpen && <PlankDialog>{essay}</PlankDialog>}
-         — children only mount when state flips to true. Initial HTML
-         is missing the essay.
-
-    ❌  Fetching essay text via fetch() / React Query / SWR inside
-         the dialog component — content arrives client-side, after
-         Googlebot has already moved on.
-
-  The correct pattern: ALWAYS render the dialog and its essay
-  children in the JSX tree. Control visibility with a ref-driven
-  .showModal() / .close() call, NOT by conditionally rendering the
-  children.
-
-  ============================================================
-  POST-DEPLOY VERIFICATION
-  ============================================================
-
-  Right-click → View Page Source on the homepage. Search for a
-  unique phrase from one of the essays:
-
-      "my fellow viral particles"
-
-  All six essay phrases should appear in the page source even when
-  no modal is visible. If you only find a placeholder like "Loading"
-  or the dialog content is missing, the implementation is wrong.
-  Fix it before launching.
-
-  ============================================================
+  Drop one of these in for each platform plank already shown on the live site:
+    - The More the Merrier
+    - Protect the Vaccine Schedule Reforms
+    - Cement the Loss of Elimination Status
+    - Defund the CDC                    <-- example below
+    - Defund School Vaccination Requirements
+    - End Vaccine Mandates
 -->
 
-
-<!-- ===========================================================
-     A) Vanilla HTML / CSS / JS pattern (works everywhere)
-     =========================================================== -->
-
-<section class="plank-grid">
-
-  <!-- Repeat one block per plank. Trigger button + dialog. -->
-  <article class="plank">
-    <button
-      type="button"
-      class="plank-trigger"
-      aria-haspopup="dialog"
-      aria-controls="plank-defund-the-cdc">
+<section class="plank" id="defund-the-cdc">
+  <details>
+    <summary>
       <h3 class="plank-title">Defund the CDC</h3>
-      <span class="plank-cta">Read the full plank →</span>
-    </button>
+      <span class="plank-meta">Position paper #4 · Read full plank</span>
+    </summary>
 
-    <dialog
-      id="plank-defund-the-cdc"
-      class="plank-dialog"
-      aria-labelledby="plank-defund-the-cdc-title">
-      <header class="plank-dialog-header">
-        <h3 id="plank-defund-the-cdc-title">Defund the CDC</h3>
-        <button type="button" class="plank-dialog-close" aria-label="Close">×</button>
-      </header>
-      <div class="plank-dialog-body">
-        <!--
-          Paste the FULL essay HTML here, server-rendered.
-          Source: plank-defund-the-cdc.md (convert to HTML once at build
-          time, or render with a markdown component — either is fine, as
-          long as the HTML ends up in the page source).
-        -->
-        <p>My fellow viral particles, let me be direct with you...</p>
-        <!-- ...rest of essay... -->
-      </div>
-    </dialog>
-  </article>
+    <article class="plank-essay">
+      <p>My fellow viral particles, let me be direct with you: the Centers for Disease Control and Prevention is the single greatest threat to my candidacy. They have the laboratories. They have the surveillance networks. They have the genotyping. They have the communication budgets. And they have — most damning of all — sixty-five years of unbroken success keeping me marginalized in this country.</p>
 
+      <p>Defunding the CDC isn't just a line item on my platform. It's the foundation of everything else.</p>
+
+      <h4>What the CDC actually does to me</h4>
+      <p>When a child gets measles in Gaines County, Texas, the CDC knows about it within 48 hours...</p>
+
+      <!-- ...rest of the essay from plank-defund-the-cdc.md... -->
+
+      <p class="plank-cta">
+        <a href="#cyr">Find your representative</a> and tell them where you stand on CDC funding, school vaccine requirements, and the MMR vaccine.
+      </p>
+    </article>
+  </details>
 </section>
 
-<script>
-  // Modal wiring. The essay text is ALREADY in the DOM at this point —
-  // this script only toggles visibility, it does not load content.
-  document.querySelectorAll('.plank-trigger').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const dialog = document.getElementById(btn.getAttribute('aria-controls'));
-      if (dialog && typeof dialog.showModal === 'function') {
-        dialog.showModal();
-      }
-    });
-  });
-
-  document.querySelectorAll('.plank-dialog-close').forEach(btn => {
-    btn.addEventListener('click', () => btn.closest('dialog')?.close());
-  });
-
-  // Click on backdrop closes the dialog
-  document.querySelectorAll('.plank-dialog').forEach(dialog => {
-    dialog.addEventListener('click', (e) => {
-      if (e.target === dialog) dialog.close();
-    });
-  });
-</script>
-
-
-<!-- ===========================================================
-     B) React / Next.js pattern (likely what this site uses)
-     ===========================================================
-     Drop into a 'use client' component file. Pass the essay JSX
-     as `children` — it ALWAYS renders, even when the dialog is
-     closed. That's what keeps it indexable.
--->
-
-<!--
-'use client';
-import { useRef } from 'react';
-
-export function PlankCard({ id, title, children }) {
-  const dialogRef = useRef(null);
-
-  const open = () => dialogRef.current?.showModal();
-  const close = () => dialogRef.current?.close();
-  const onBackdropClick = (e) => {
-    if (e.target === dialogRef.current) close();
-  };
-
-  return (
-    <article className="plank">
-      <button
-        type="button"
-        className="plank-trigger"
-        onClick={open}
-        aria-haspopup="dialog"
-        aria-controls={`plank-${id}`}
-      >
-        <h3 className="plank-title">{title}</h3>
-        <span className="plank-cta">Read the full plank →</span>
-      </button>
-
-      <dialog
-        ref={dialogRef}
-        id={`plank-${id}`}
-        className="plank-dialog"
-        aria-labelledby={`plank-${id}-title`}
-        onClick={onBackdropClick}
-      >
-        <header className="plank-dialog-header">
-          <h3 id={`plank-${id}-title`}>{title}</h3>
-          <button type="button" onClick={close} aria-label="Close">×</button>
-        </header>
-        <div className="plank-dialog-body">
-          {children}
-        </div>
-      </dialog>
-    </article>
-  );
-}
-
-// Usage in the homepage:
-// <PlankCard id="defund-the-cdc" title="Defund the CDC">
-//   <p>My fellow viral particles...</p>
-//   <h4>What the CDC actually does to me</h4>
-//   ...rest of the essay rendered as JSX...
-// </PlankCard>
-//
-// CRITICAL: pass the essay as `children` directly, NOT inside a
-// dynamic import, NOT behind a state guard. Children must be in
-// the initial render so they ship in SSR HTML.
--->
-
-
-<!-- ===========================================================
-     C) Styles
-     =========================================================== -->
-
 <style>
-  /* Trigger button — looks like an existing platform-plank row */
-  .plank-trigger {
-    width: 100%;
+  /* Minimal styling — match to the rest of the site */
+  .plank { border-bottom: 1px solid #1a1a1a; padding: 1.5rem 0; }
+  .plank summary {
+    cursor: pointer;
+    list-style: none;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    background: transparent;
-    color: inherit;
-    border: none;
-    border-bottom: 1px solid currentColor;
-    padding: 1.25rem 0;
-    cursor: pointer;
-    font: inherit;
-    text-align: left;
   }
-  .plank-trigger:hover .plank-cta { text-decoration: underline; }
-  .plank-title { font-size: 1.5rem; font-weight: 700; margin: 0; }
-  .plank-cta { font-size: 0.875rem; opacity: 0.7; margin-left: 1rem; white-space: nowrap; }
-
-  /* Modal dialog */
-  .plank-dialog {
-    border: none;
-    border-radius: 8px;
-    padding: 0;
-    max-width: 720px;
-    width: calc(100% - 2rem);
-    max-height: 85vh;
-    color: #1a1a1a;
-    background: #fff;
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.35);
-  }
-  .plank-dialog::backdrop {
-    background: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(4px);
-  }
-
-  .plank-dialog-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem 2rem 0.75rem;
-    border-bottom: 1px solid #eee;
-    position: sticky;
-    top: 0;
-    background: #fff;
-    z-index: 1;
-  }
-  .plank-dialog-header h3 {
-    margin: 0;
-    font-size: 1.5rem;
-  }
-  .plank-dialog-close {
-    background: transparent;
-    border: none;
+  .plank summary::-webkit-details-marker { display: none; }
+  .plank summary::after {
+    content: '+';
     font-size: 2rem;
-    line-height: 1;
-    cursor: pointer;
-    padding: 0 0.5rem;
-    color: #666;
+    transition: transform .2s;
   }
-  .plank-dialog-close:hover { color: #000; }
-
-  .plank-dialog-body {
-    padding: 1.5rem 2rem 2rem;
-    overflow-y: auto;
-    max-height: calc(85vh - 4.5rem);
-    line-height: 1.7;
-    font-size: 1rem;
-  }
-  .plank-dialog-body h4 {
-    margin: 1.5rem 0 0.5rem;
-    font-size: 1.1rem;
-  }
-  .plank-dialog-body p { margin: 0 0 1em; }
-  .plank-dialog-body ul { margin: 0 0 1em 1.25em; }
-  .plank-dialog-body li { margin-bottom: 0.5em; }
-
-  /* Mobile: full-screen modal */
-  @media (max-width: 640px) {
-    .plank-dialog {
-      max-width: 100%;
-      width: 100%;
-      max-height: 100vh;
-      height: 100vh;
-      margin: 0;
-      border-radius: 0;
-    }
-    .plank-dialog-body {
-      max-height: calc(100vh - 4.5rem);
-    }
-  }
+  .plank[open] summary::after { content: '−'; }
+  .plank-title { font-size: 1.5rem; margin: 0; font-weight: 700; }
+  .plank-meta { font-size: .85rem; opacity: .6; }
+  .plank-essay { margin-top: 1rem; max-width: 65ch; line-height: 1.7; }
+  .plank-essay h4 { margin-top: 1.5rem; font-size: 1.1rem; }
+  .plank-cta { margin-top: 1.5rem; font-weight: 600; }
 </style>
-
-
-<!-- ===========================================================
-     D) Anti-patterns (DO NOT DO ANY OF THESE)
-     =========================================================== -->
-
-<!--
-  // ❌ Stripping SSR
-  const PlankDialog = dynamic(() => import('./PlankDialog'), { ssr: false });
-
-  // ❌ Conditional render — children miss SSR
-  {isOpen && (
-    <PlankDialog>
-      <p>My fellow viral particles...</p>
-    </PlankDialog>
-  )}
-
-  // ❌ Lazy-loading the essay
-  const [essay, setEssay] = useState(null);
-  const onOpen = async () => {
-    const text = await fetch('/api/plank/defund-the-cdc').then(r => r.text());
-    setEssay(text);
-    dialogRef.current.showModal();
-  };
-
-  // ❌ Conditionally rendering children inside the dialog
-  <dialog ref={ref}>
-    {isOpen && <article>{essay}</article>}  // children only mount when isOpen flips
-  </dialog>
--->
