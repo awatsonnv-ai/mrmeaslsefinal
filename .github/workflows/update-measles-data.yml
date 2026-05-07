@@ -54,8 +54,14 @@ jobs:
             exit 0
           fi
 
-          git commit -m "Auto-update measles data - $(date +'%Y-%m-%d')"
-          git push origin HEAD:main
+          git pull --rebase origin main
+git add index.html
+if git diff --cached --quiet; then
+  echo "No measles data changes to commit."
+  exit 0
+fi
+git commit -m "Auto-update measles data - $(date +'%Y-%m-%d')"
+git push origin HEAD:main
 
       - name: Create issue on failure
         if: failure()
