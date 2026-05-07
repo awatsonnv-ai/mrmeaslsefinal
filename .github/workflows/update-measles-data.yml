@@ -41,12 +41,17 @@ jobs:
         run: node update-measles-data.js
 
       - name: Commit and push changes
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: Auto-update measles data
-          file_pattern: index.html
-          commit_user_email: action@github.com
-          commit_user_name: GitHub Action
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add index.html
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git pull --rebase origin main
+          git commit -m "Auto-update measles data - $(date +'%Y-%m-%d')"
+          git push origin HEAD:main
 
       - name: Create issue on failure
         if: failure()
