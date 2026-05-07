@@ -2,8 +2,8 @@ import sharp from 'sharp';
 import pngToIco from 'png-to-ico';
 import { writeFileSync, existsSync } from 'fs';
 
-if (!existsSync('favicon-source.png')) {
-  console.error('favicon-source.png not found — run crop-favicon-source.mjs first');
+if (!existsSync('assets/favicon-source.png')) {
+  console.error('assets/favicon-source.png not found — run crop-favicon-source.mjs first');
   process.exit(1);
 }
 
@@ -19,7 +19,7 @@ const pngs = [
 ];
 
 for (const { file, size } of pngs) {
-  await sharp('favicon-source.png').resize(size, size).png().toFile(file);
+  await sharp('assets/favicon-source.png').resize(size, size).png().toFile(file);
   if (!file.startsWith('_')) console.log(`  ✓ ${file} (${size}×${size})`);
 }
 

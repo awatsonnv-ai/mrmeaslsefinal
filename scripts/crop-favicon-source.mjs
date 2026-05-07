@@ -12,6 +12,6 @@ await sharp('og-image.png')
   .extract({ left: 300, top: 0, width: 600, height: 600 })
   .resize(512, 512)
   .png()
-  .toFile('favicon-source.png');
+  .toFile('assets/favicon-source.png');
 
-console.log('favicon-source.png written (512×512)');
+console.log('assets/favicon-source.png written (512×512)');
