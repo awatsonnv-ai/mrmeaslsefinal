@@ -41,6 +41,7 @@ jobs:
         run: node update-measles-data.js
 
       - name: Commit and push changes
+<<<<<<< Updated upstream
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
@@ -52,6 +53,14 @@ jobs:
           git pull --rebase origin main
           git commit -m "Auto-update measles data - $(date +'%Y-%m-%d')"
           git push origin HEAD:main
+=======
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Auto-update measles data
+          file_pattern: index.html
+          commit_user_email: action@github.com
+          commit_user_name: GitHub Action
+>>>>>>> Stashed changes
 
       - name: Create issue on failure
         if: failure()

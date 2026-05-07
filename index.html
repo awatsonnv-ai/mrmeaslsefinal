@@ -997,5 +997,88 @@
 })();
 </script>
 
+<!-- Background music -->
+<audio id="bg-music" src="/assets/audio/movement-spreading.mp3" preload="auto"></audio>
+
+<div id="music-player">
+  <button id="music-btn" aria-label="Toggle music">
+    <span id="music-icon">♪</span>
+    <span id="music-label">The Movement Is Spreading</span>
+  </button>
+</div>
+
+<style>
+  #music-player {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 9000;
+  }
+  #music-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--navy);
+    color: var(--yellow);
+    border: 2px solid var(--yellow);
+    border-radius: 999px;
+    padding: 8px 16px 8px 12px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+    transition: background 0.2s, color 0.2s;
+  }
+  #music-btn:hover { background: var(--yellow); color: var(--navy); }
+  #music-icon { font-size: 16px; }
+  #music-btn.paused #music-icon { opacity: 0.5; }
+</style>
+
+<script>
+(function() {
+  var audio = document.getElementById('bg-music');
+  var btn = document.getElementById('music-btn');
+  var icon = document.getElementById('music-icon');
+  var playing = false;
+
+  function startMusic() {
+    audio.play().then(function() {
+      playing = true;
+      icon.textContent = '♪';
+      btn.classList.remove('paused');
+    }).catch(function() {});
+  }
+
+  function toggleMusic() {
+    if (playing) {
+      audio.pause();
+      playing = false;
+      icon.textContent = '▐▐';
+      btn.classList.add('paused');
+    } else {
+      audio.play();
+      playing = true;
+      icon.textContent = '♪';
+      btn.classList.remove('paused');
+    }
+  }
+
+  btn.addEventListener('click', function(e) {
+    e.stopPropagation();
+    toggleMusic();
+  });
+
+  // Try autoplay immediately
+  startMusic();
+
+  // If blocked, play on first interaction anywhere on page
+  document.addEventListener('click', function() {
+    if (!playing) startMusic();
+  }, { once: true });
+})();
+</script>
+
 </body>
 </html>
