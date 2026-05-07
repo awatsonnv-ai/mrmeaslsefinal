@@ -990,10 +990,15 @@
     return;
   }
 
-  document.getElementById('popup-close-btn').addEventListener('click', closePopup);
-  document.getElementById('popup-skip-btn').addEventListener('click', closePopup);
-  overlay.addEventListener('click', function(e) { if (e.target === overlay) closePopup(); });
-  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closePopup(); });
+  function closePopupAndPlay() {
+    closePopup();
+    if (window.startBgMusic) window.startBgMusic();
+  }
+
+  document.getElementById('popup-close-btn').addEventListener('click', closePopupAndPlay);
+  document.getElementById('popup-skip-btn').addEventListener('click', closePopupAndPlay);
+  overlay.addEventListener('click', function(e) { if (e.target === overlay) closePopupAndPlay(); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closePopupAndPlay(); });
 })();
 </script>
 
@@ -1044,6 +1049,7 @@
   var playing = false;
 
   function startMusic() {
+    if (playing) return;
     audio.play().then(function() {
       playing = true;
       icon.textContent = '♪';
@@ -1058,24 +1064,28 @@
       icon.textContent = '▐▐';
       btn.classList.add('paused');
     } else {
-      audio.play();
-      playing = true;
-      icon.textContent = '♪';
-      btn.classList.remove('paused');
+      audio.play().then(function() {
+        playing = true;
+        icon.textContent = '♪';
+        btn.classList.remove('paused');
+      });
     }
   }
+
+  // Expose globally so popup close can trigger it
+  window.startBgMusic = startMusic;
 
   btn.addEventListener('click', function(e) {
     e.stopPropagation();
     toggleMusic();
   });
 
-  // Try autoplay immediately
+  // Try autoplay immediately on load
   startMusic();
 
-  // If blocked, play on first interaction anywhere on page
+  // If blocked, start on first interaction — including clicks inside the popup
   document.addEventListener('click', function() {
-    if (!playing) startMusic();
+    startMusic();
   }, { once: true });
 })();
 </script>
