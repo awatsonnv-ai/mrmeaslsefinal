@@ -1,0 +1,1718 @@
+{
+  "generatedAt": "2026-08-18",
+  "note": "states = real U.S. Senate data (100 senators, 50 states) sourced from the Vaccine_EO_Senate_Tracker_2026-08-18 workbook's Senate Tracker sheet, refreshed 2026-08-18. Photos via the unitedstates/images public congressional photo mirror (same open-data family congress/data/ already uses); 3 senators newly seated since the last mirror sync (Alan Armstrong, Jon Husted, Darline Graham) have no photo yet and fall back to the initial-letter placeholder. demo = fictional placeholder entries used only to preview stance/RFK-vote badge variants not currently present in the real data (e.g. 'supports' — zero real senators currently carry that stance). Do not treat demo entries as real senators. The workbook's Unverified Leads sheet was intentionally excluded per its own guidance: 'Do not surface these as stances on the public site unless independently verified.'",
+  "states": {
+    "AK": {
+      "stateName": "Alaska",
+      "senators": [
+        {
+          "bioguide": "S001198",
+          "name": "Dan Sullivan",
+          "party": "R",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/S001198.jpg",
+          "stance": "no_stance",
+          "rfkVote": "yes",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        },
+        {
+          "bioguide": "M001153",
+          "name": "Lisa Murkowski",
+          "party": "R",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/M001153.jpg",
+          "stance": "no_stance",
+          "rfkVote": "yes",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        }
+      ]
+    },
+    "AL": {
+      "stateName": "Alabama",
+      "senators": [
+        {
+          "bioguide": "B001319",
+          "name": "Katie Britt",
+          "party": "R",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/B001319.jpg",
+          "stance": "no_stance",
+          "rfkVote": "yes",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        },
+        {
+          "bioguide": "T000278",
+          "name": "Tommy Tuberville",
+          "party": "R",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/T000278.jpg",
+          "stance": "no_stance",
+          "rfkVote": "yes",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        }
+      ]
+    },
+    "AR": {
+      "stateName": "Arkansas",
+      "senators": [
+        {
+          "bioguide": "B001236",
+          "name": "John Boozman",
+          "party": "R",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/B001236.jpg",
+          "stance": "no_stance",
+          "rfkVote": "yes",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        },
+        {
+          "bioguide": "C001095",
+          "name": "Tom Cotton",
+          "party": "R",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/C001095.jpg",
+          "stance": "no_stance",
+          "rfkVote": "yes",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        }
+      ]
+    },
+    "AZ": {
+      "stateName": "Arizona",
+      "senators": [
+        {
+          "bioguide": "K000377",
+          "name": "Mark Kelly",
+          "party": "D",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/K000377.jpg",
+          "stance": "no_stance",
+          "rfkVote": "no",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        },
+        {
+          "bioguide": "G000574",
+          "name": "Ruben Gallego",
+          "party": "D",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/G000574.jpg",
+          "stance": "unclear",
+          "rfkVote": "no",
+          "statementDate": "2026-08-10",
+          "statementSummary": "Mocked Trump’s vaccination remarks at the signing, but did not clearly express a substantive position on the executive order itself.",
+          "sourceUrl": "https://gomcgill.com/the-size-of-a-bottle-of-soda-donald-trump-makes-unusual-claim-about-childrens-vaccinations",
+          "secondarySourceUrl": null,
+          "evidenceConfidence": "Medium",
+          "verificationNote": "EO-adjacent reaction; kept out of the opposition count because the post did not clearly oppose the order."
+        }
+      ]
+    },
+    "CA": {
+      "stateName": "California",
+      "senators": [
+        {
+          "bioguide": "S001150",
+          "name": "Adam Schiff",
+          "party": "D",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/S001150.jpg",
+          "stance": "no_stance",
+          "rfkVote": "no",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        },
+        {
+          "bioguide": "P000145",
+          "name": "Alejandro Padilla",
+          "party": "D",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/P000145.jpg",
+          "stance": "no_stance",
+          "rfkVote": "no",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        }
+      ]
+    },
+    "CO": {
+      "stateName": "Colorado",
+      "senators": [
+        {
+          "bioguide": "H000273",
+          "name": "John Hickenlooper",
+          "party": "D",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/H000273.jpg",
+          "stance": "no_stance",
+          "rfkVote": "no",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        },
+        {
+          "bioguide": "B001267",
+          "name": "Michael Bennet",
+          "party": "D",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/B001267.jpg",
+          "stance": "opposes",
+          "rfkVote": "no",
+          "statementDate": "2026-08-10",
+          "statementSummary": "Said overturning settled vaccine guidance and eroding school immunization standards puts children at risk.",
+          "sourceUrl": "https://www.bennet.senate.gov/2026/08/10/bennet-statement-on-trump-undermining-childhood-vaccines-as-colorado-kids-return-to-school/",
+          "secondarySourceUrl": null,
+          "evidenceConfidence": "High",
+          "verificationNote": "Direct official Senate press release verified in the Aug. 11 audit; no later EO-specific position located in the Aug. 18 refresh."
+        }
+      ]
+    },
+    "CT": {
+      "stateName": "Connecticut",
+      "senators": [
+        {
+          "bioguide": "M001169",
+          "name": "Christopher Murphy",
+          "party": "D",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/M001169.jpg",
+          "stance": "no_stance",
+          "rfkVote": "no",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        },
+        {
+          "bioguide": "B001277",
+          "name": "Richard Blumenthal",
+          "party": "D",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/B001277.jpg",
+          "stance": "no_stance",
+          "rfkVote": "no",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        }
+      ]
+    },
+    "DE": {
+      "stateName": "Delaware",
+      "senators": [
+        {
+          "bioguide": "C001088",
+          "name": "Christopher Coons",
+          "party": "D",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/C001088.jpg",
+          "stance": "no_stance",
+          "rfkVote": "no",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        },
+        {
+          "bioguide": "B001303",
+          "name": "Lisa Blunt Rochester",
+          "party": "D",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/B001303.jpg",
+          "stance": "no_stance",
+          "rfkVote": "no",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        }
+      ]
+    },
+    "FL": {
+      "stateName": "Florida",
+      "senators": [
+        {
+          "bioguide": "M001244",
+          "name": "Ashley Moody",
+          "party": "R",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/M001244.jpg",
+          "stance": "no_stance",
+          "rfkVote": "yes",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        },
+        {
+          "bioguide": "S001217",
+          "name": "Rick Scott",
+          "party": "R",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/S001217.jpg",
+          "stance": "no_stance",
+          "rfkVote": "yes",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        }
+      ]
+    },
+    "GA": {
+      "stateName": "Georgia",
+      "senators": [
+        {
+          "bioguide": "O000174",
+          "name": "Jon Ossoff",
+          "party": "D",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/O000174.jpg",
+          "stance": "no_stance",
+          "rfkVote": "no",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        },
+        {
+          "bioguide": "W000790",
+          "name": "Raphael Warnock",
+          "party": "D",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/W000790.jpg",
+          "stance": "no_stance",
+          "rfkVote": "no",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        }
+      ]
+    },
+    "HI": {
+      "stateName": "Hawaii",
+      "senators": [
+        {
+          "bioguide": "S001194",
+          "name": "Brian Schatz",
+          "party": "D",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/S001194.jpg",
+          "stance": "no_stance",
+          "rfkVote": "no",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        },
+        {
+          "bioguide": "H001042",
+          "name": "Mazie Hirono",
+          "party": "D",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/H001042.jpg",
+          "stance": "no_stance",
+          "rfkVote": "no",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        }
+      ]
+    },
+    "IA": {
+      "stateName": "Iowa",
+      "senators": [
+        {
+          "bioguide": "G000386",
+          "name": "Charles Grassley",
+          "party": "R",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/G000386.jpg",
+          "stance": "no_stance",
+          "rfkVote": "yes",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        },
+        {
+          "bioguide": "E000295",
+          "name": "Joni Ernst",
+          "party": "R",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/E000295.jpg",
+          "stance": "no_stance",
+          "rfkVote": "yes",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        }
+      ]
+    },
+    "ID": {
+      "stateName": "Idaho",
+      "senators": [
+        {
+          "bioguide": "R000584",
+          "name": "James Risch",
+          "party": "R",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/R000584.jpg",
+          "stance": "no_stance",
+          "rfkVote": "yes",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        },
+        {
+          "bioguide": "C000880",
+          "name": "Michael Crapo",
+          "party": "R",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/C000880.jpg",
+          "stance": "no_stance",
+          "rfkVote": "yes",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        }
+      ]
+    },
+    "IL": {
+      "stateName": "Illinois",
+      "senators": [
+        {
+          "bioguide": "D000563",
+          "name": "Richard Durbin",
+          "party": "D",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/D000563.jpg",
+          "stance": "no_stance",
+          "rfkVote": "no",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        },
+        {
+          "bioguide": "D000622",
+          "name": "Tammy Duckworth",
+          "party": "D",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/D000622.jpg",
+          "stance": "no_stance",
+          "rfkVote": "no",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        }
+      ]
+    },
+    "IN": {
+      "stateName": "Indiana",
+      "senators": [
+        {
+          "bioguide": "B001299",
+          "name": "Jim Banks",
+          "party": "R",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/B001299.jpg",
+          "stance": "no_stance",
+          "rfkVote": "yes",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        },
+        {
+          "bioguide": "Y000064",
+          "name": "Todd Young",
+          "party": "R",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/Y000064.jpg",
+          "stance": "no_stance",
+          "rfkVote": "yes",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        }
+      ]
+    },
+    "KS": {
+      "stateName": "Kansas",
+      "senators": [
+        {
+          "bioguide": "M000934",
+          "name": "Jerry Moran",
+          "party": "R",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/M000934.jpg",
+          "stance": "no_stance",
+          "rfkVote": "yes",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        },
+        {
+          "bioguide": "M001198",
+          "name": "Roger Marshall",
+          "party": "R",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/M001198.jpg",
+          "stance": "no_stance",
+          "rfkVote": "yes",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        }
+      ]
+    },
+    "KY": {
+      "stateName": "Kentucky",
+      "senators": [
+        {
+          "bioguide": "M000355",
+          "name": "Mitch McConnell",
+          "party": "R",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/M000355.jpg",
+          "stance": "no_stance",
+          "rfkVote": "no",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        },
+        {
+          "bioguide": "P000603",
+          "name": "Rand Paul",
+          "party": "R",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/P000603.jpg",
+          "stance": "no_stance",
+          "rfkVote": "yes",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        }
+      ]
+    },
+    "LA": {
+      "stateName": "Louisiana",
+      "senators": [
+        {
+          "bioguide": "C001075",
+          "name": "Bill Cassidy",
+          "party": "R",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/C001075.jpg",
+          "stance": "opposes",
+          "rfkVote": "yes",
+          "statementDate": "2026-08-16",
+          "statementSummary": "Opposed the Aug. 10 vaccine order and, in an Aug. 16 interview, warned that separating MMR shots would create more visits, cost and barriers to vaccination.",
+          "sourceUrl": "https://x.com/SenBillCassidy/status/2086906268669624512",
+          "secondarySourceUrl": "https://www.theguardian.com/us-news/2026/aug/16/republican-senator-bill-cassidy-denounces-trump-vaccine-claims",
+          "evidenceConfidence": "High",
+          "verificationNote": "Direct Aug. 10 official X opposition; opposition reaffirmed publicly Aug. 16."
+        },
+        {
+          "bioguide": "K000393",
+          "name": "John Kennedy",
+          "party": "R",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/K000393.jpg",
+          "stance": "no_stance",
+          "rfkVote": "yes",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        }
+      ]
+    },
+    "MA": {
+      "stateName": "Massachusetts",
+      "senators": [
+        {
+          "bioguide": "M000133",
+          "name": "Edward Markey",
+          "party": "D",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/M000133.jpg",
+          "stance": "no_stance",
+          "rfkVote": "no",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        },
+        {
+          "bioguide": "W000817",
+          "name": "Elizabeth Warren",
+          "party": "D",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/W000817.jpg",
+          "stance": "no_stance",
+          "rfkVote": "no",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        }
+      ]
+    },
+    "MD": {
+      "stateName": "Maryland",
+      "senators": [
+        {
+          "bioguide": "A000382",
+          "name": "Angela Alsobrooks",
+          "party": "D",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/A000382.jpg",
+          "stance": "no_stance",
+          "rfkVote": "no",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        },
+        {
+          "bioguide": "V000128",
+          "name": "Chris Van Hollen",
+          "party": "D",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/V000128.jpg",
+          "stance": "no_stance",
+          "rfkVote": "no",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        }
+      ]
+    },
+    "ME": {
+      "stateName": "Maine",
+      "senators": [
+        {
+          "bioguide": "K000383",
+          "name": "Angus King",
+          "party": "I",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/K000383.jpg",
+          "stance": "no_stance",
+          "rfkVote": "no",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        },
+        {
+          "bioguide": "C001035",
+          "name": "Susan Collins",
+          "party": "R",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/C001035.jpg",
+          "stance": "no_stance",
+          "rfkVote": "yes",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        }
+      ]
+    },
+    "MI": {
+      "stateName": "Michigan",
+      "senators": [
+        {
+          "bioguide": "S001208",
+          "name": "Elissa Slotkin",
+          "party": "D",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/S001208.jpg",
+          "stance": "no_stance",
+          "rfkVote": "no",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        },
+        {
+          "bioguide": "P000595",
+          "name": "Gary Peters",
+          "party": "D",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/P000595.jpg",
+          "stance": "no_stance",
+          "rfkVote": "no",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        }
+      ]
+    },
+    "MN": {
+      "stateName": "Minnesota",
+      "senators": [
+        {
+          "bioguide": "K000367",
+          "name": "Amy Klobuchar",
+          "party": "D",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/K000367.jpg",
+          "stance": "no_stance",
+          "rfkVote": "no",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        },
+        {
+          "bioguide": "S001203",
+          "name": "Tina Smith",
+          "party": "D",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/S001203.jpg",
+          "stance": "no_stance",
+          "rfkVote": "no",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        }
+      ]
+    },
+    "MO": {
+      "stateName": "Missouri",
+      "senators": [
+        {
+          "bioguide": "S001227",
+          "name": "Eric Schmitt",
+          "party": "R",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/S001227.jpg",
+          "stance": "no_stance",
+          "rfkVote": "yes",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        },
+        {
+          "bioguide": "H001089",
+          "name": "Joshua Hawley",
+          "party": "R",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/H001089.jpg",
+          "stance": "no_stance",
+          "rfkVote": "yes",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        }
+      ]
+    },
+    "MS": {
+      "stateName": "Mississippi",
+      "senators": [
+        {
+          "bioguide": "H001079",
+          "name": "Cindy Hyde-Smith",
+          "party": "R",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/H001079.jpg",
+          "stance": "no_stance",
+          "rfkVote": "yes",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        },
+        {
+          "bioguide": "W000437",
+          "name": "Roger Wicker",
+          "party": "R",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/W000437.jpg",
+          "stance": "no_stance",
+          "rfkVote": "yes",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        }
+      ]
+    },
+    "MT": {
+      "stateName": "Montana",
+      "senators": [
+        {
+          "bioguide": "D000618",
+          "name": "Steve Daines",
+          "party": "R",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/D000618.jpg",
+          "stance": "no_stance",
+          "rfkVote": "yes",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        },
+        {
+          "bioguide": "S001232",
+          "name": "Tim Sheehy",
+          "party": "R",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/S001232.jpg",
+          "stance": "no_stance",
+          "rfkVote": "yes",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        }
+      ]
+    },
+    "NC": {
+      "stateName": "North Carolina",
+      "senators": [
+        {
+          "bioguide": "B001305",
+          "name": "Ted Budd",
+          "party": "R",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/B001305.jpg",
+          "stance": "no_stance",
+          "rfkVote": "yes",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        },
+        {
+          "bioguide": "T000476",
+          "name": "Thom Tillis",
+          "party": "R",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/T000476.jpg",
+          "stance": "no_stance",
+          "rfkVote": "yes",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        }
+      ]
+    },
+    "ND": {
+      "stateName": "North Dakota",
+      "senators": [
+        {
+          "bioguide": "H001061",
+          "name": "John Hoeven",
+          "party": "R",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/H001061.jpg",
+          "stance": "no_stance",
+          "rfkVote": "yes",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        },
+        {
+          "bioguide": "C001096",
+          "name": "Kevin Cramer",
+          "party": "R",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/C001096.jpg",
+          "stance": "no_stance",
+          "rfkVote": "yes",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        }
+      ]
+    },
+    "NE": {
+      "stateName": "Nebraska",
+      "senators": [
+        {
+          "bioguide": "F000463",
+          "name": "Deb Fischer",
+          "party": "R",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/F000463.jpg",
+          "stance": "no_stance",
+          "rfkVote": "yes",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        },
+        {
+          "bioguide": "R000618",
+          "name": "Pete Ricketts",
+          "party": "R",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/R000618.jpg",
+          "stance": "no_stance",
+          "rfkVote": "yes",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        }
+      ]
+    },
+    "NH": {
+      "stateName": "New Hampshire",
+      "senators": [
+        {
+          "bioguide": "S001181",
+          "name": "Jeanne Shaheen",
+          "party": "D",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/S001181.jpg",
+          "stance": "no_stance",
+          "rfkVote": "no",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        },
+        {
+          "bioguide": "H001076",
+          "name": "Margaret Hassan",
+          "party": "D",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/H001076.jpg",
+          "stance": "no_stance",
+          "rfkVote": "no",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        }
+      ]
+    },
+    "NJ": {
+      "stateName": "New Jersey",
+      "senators": [
+        {
+          "bioguide": "K000394",
+          "name": "Andy Kim",
+          "party": "D",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/K000394.jpg",
+          "stance": "no_stance",
+          "rfkVote": "no",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        },
+        {
+          "bioguide": "B001288",
+          "name": "Cory Booker",
+          "party": "D",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/B001288.jpg",
+          "stance": "no_stance",
+          "rfkVote": "no",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        }
+      ]
+    },
+    "NM": {
+      "stateName": "New Mexico",
+      "senators": [
+        {
+          "bioguide": "L000570",
+          "name": "Ben Luján",
+          "party": "D",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/L000570.jpg",
+          "stance": "no_stance",
+          "rfkVote": "no",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        },
+        {
+          "bioguide": "H001046",
+          "name": "Martin Heinrich",
+          "party": "D",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/H001046.jpg",
+          "stance": "no_stance",
+          "rfkVote": "no",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        }
+      ]
+    },
+    "NV": {
+      "stateName": "Nevada",
+      "senators": [
+        {
+          "bioguide": "C001113",
+          "name": "Catherine Cortez Masto",
+          "party": "D",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/C001113.jpg",
+          "stance": "no_stance",
+          "rfkVote": "no",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        },
+        {
+          "bioguide": "R000608",
+          "name": "Jacky Rosen",
+          "party": "D",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/R000608.jpg",
+          "stance": "no_stance",
+          "rfkVote": "no",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        }
+      ]
+    },
+    "NY": {
+      "stateName": "New York",
+      "senators": [
+        {
+          "bioguide": "S000148",
+          "name": "Charles Schumer",
+          "party": "D",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/S000148.jpg",
+          "stance": "opposes",
+          "rfkVote": "no",
+          "statementDate": "2026-08-10",
+          "statementSummary": "Criticized Trump and RFK Jr. over childhood vaccination at the signing and told parents not to rely on them for vaccination guidance.",
+          "sourceUrl": "https://www.benzinga.com/news/health-care/26/08/61101508/chuck-schumer-calls-trumps-vaccine-remarks-ramblings-no-parent-should-listen-to-him",
+          "secondarySourceUrl": "https://gomcgill.com/the-size-of-a-bottle-of-soda-donald-trump-makes-unusual-claim-about-childrens-vaccinations",
+          "evidenceConfidence": "Medium",
+          "verificationNote": "Two secondary outlets quote the Aug. 10 social posts; no direct official post was retrievable."
+        },
+        {
+          "bioguide": "G000555",
+          "name": "Kirsten Gillibrand",
+          "party": "D",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/G000555.jpg",
+          "stance": "no_stance",
+          "rfkVote": "no",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        }
+      ]
+    },
+    "OH": {
+      "stateName": "Ohio",
+      "senators": [
+        {
+          "bioguide": "M001242",
+          "name": "Bernie Moreno",
+          "party": "R",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/M001242.jpg",
+          "stance": "no_stance",
+          "rfkVote": "yes",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        },
+        {
+          "bioguide": "H001104",
+          "name": "Jon Husted",
+          "party": "R",
+          "photoUrl": null,
+          "stance": "no_stance",
+          "rfkVote": "yes",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        }
+      ]
+    },
+    "OK": {
+      "stateName": "Oklahoma",
+      "senators": [
+        {
+          "bioguide": "A000383",
+          "name": "Alan Armstrong",
+          "party": "R",
+          "photoUrl": null,
+          "stance": "no_stance",
+          "rfkVote": "not_serving",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        },
+        {
+          "bioguide": "L000575",
+          "name": "James Lankford",
+          "party": "R",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/L000575.jpg",
+          "stance": "no_stance",
+          "rfkVote": "yes",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        }
+      ]
+    },
+    "OR": {
+      "stateName": "Oregon",
+      "senators": [
+        {
+          "bioguide": "M001176",
+          "name": "Jeff Merkley",
+          "party": "D",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/M001176.jpg",
+          "stance": "no_stance",
+          "rfkVote": "no",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        },
+        {
+          "bioguide": "W000779",
+          "name": "Ron Wyden",
+          "party": "D",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/W000779.jpg",
+          "stance": "no_stance",
+          "rfkVote": "no",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        }
+      ]
+    },
+    "PA": {
+      "stateName": "Pennsylvania",
+      "senators": [
+        {
+          "bioguide": "M001243",
+          "name": "Dave McCormick",
+          "party": "R",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/M001243.jpg",
+          "stance": "no_stance",
+          "rfkVote": "yes",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        },
+        {
+          "bioguide": "F000479",
+          "name": "John Fetterman",
+          "party": "D",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/F000479.jpg",
+          "stance": "no_stance",
+          "rfkVote": "no",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        }
+      ]
+    },
+    "RI": {
+      "stateName": "Rhode Island",
+      "senators": [
+        {
+          "bioguide": "R000122",
+          "name": "John Reed",
+          "party": "D",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/R000122.jpg",
+          "stance": "no_stance",
+          "rfkVote": "no",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        },
+        {
+          "bioguide": "W000802",
+          "name": "Sheldon Whitehouse",
+          "party": "D",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/W000802.jpg",
+          "stance": "no_stance",
+          "rfkVote": "no",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        }
+      ]
+    },
+    "SC": {
+      "stateName": "South Carolina",
+      "senators": [
+        {
+          "bioguide": "G000608",
+          "name": "Darline Graham",
+          "party": "R",
+          "photoUrl": null,
+          "stance": "no_stance",
+          "rfkVote": "not_serving",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        },
+        {
+          "bioguide": "S001184",
+          "name": "Tim Scott",
+          "party": "R",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/S001184.jpg",
+          "stance": "no_stance",
+          "rfkVote": "yes",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        }
+      ]
+    },
+    "SD": {
+      "stateName": "South Dakota",
+      "senators": [
+        {
+          "bioguide": "T000250",
+          "name": "John Thune",
+          "party": "R",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/T000250.jpg",
+          "stance": "no_stance",
+          "rfkVote": "yes",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        },
+        {
+          "bioguide": "R000605",
+          "name": "Mike Rounds",
+          "party": "R",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/R000605.jpg",
+          "stance": "no_stance",
+          "rfkVote": "yes",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        }
+      ]
+    },
+    "TN": {
+      "stateName": "Tennessee",
+      "senators": [
+        {
+          "bioguide": "H000601",
+          "name": "Bill Hagerty",
+          "party": "R",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/H000601.jpg",
+          "stance": "no_stance",
+          "rfkVote": "yes",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        },
+        {
+          "bioguide": "B001243",
+          "name": "Marsha Blackburn",
+          "party": "R",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/B001243.jpg",
+          "stance": "no_stance",
+          "rfkVote": "yes",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        }
+      ]
+    },
+    "TX": {
+      "stateName": "Texas",
+      "senators": [
+        {
+          "bioguide": "C001056",
+          "name": "John Cornyn",
+          "party": "R",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/C001056.jpg",
+          "stance": "no_stance",
+          "rfkVote": "yes",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        },
+        {
+          "bioguide": "C001098",
+          "name": "Ted Cruz",
+          "party": "R",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/C001098.jpg",
+          "stance": "no_stance",
+          "rfkVote": "yes",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        }
+      ]
+    },
+    "UT": {
+      "stateName": "Utah",
+      "senators": [
+        {
+          "bioguide": "C001114",
+          "name": "John Curtis",
+          "party": "R",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/C001114.jpg",
+          "stance": "no_stance",
+          "rfkVote": "yes",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        },
+        {
+          "bioguide": "L000577",
+          "name": "Mike Lee",
+          "party": "R",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/L000577.jpg",
+          "stance": "no_stance",
+          "rfkVote": "yes",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        }
+      ]
+    },
+    "VA": {
+      "stateName": "Virginia",
+      "senators": [
+        {
+          "bioguide": "W000805",
+          "name": "Mark Warner",
+          "party": "D",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/W000805.jpg",
+          "stance": "no_stance",
+          "rfkVote": "no",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        },
+        {
+          "bioguide": "K000384",
+          "name": "Timothy Kaine",
+          "party": "D",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/K000384.jpg",
+          "stance": "no_stance",
+          "rfkVote": "no",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        }
+      ]
+    },
+    "VT": {
+      "stateName": "Vermont",
+      "senators": [
+        {
+          "bioguide": "S000033",
+          "name": "Bernard Sanders",
+          "party": "I",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/S000033.jpg",
+          "stance": "no_stance",
+          "rfkVote": "no",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        },
+        {
+          "bioguide": "W000800",
+          "name": "Peter Welch",
+          "party": "D",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/W000800.jpg",
+          "stance": "no_stance",
+          "rfkVote": "no",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        }
+      ]
+    },
+    "WA": {
+      "stateName": "Washington",
+      "senators": [
+        {
+          "bioguide": "C000127",
+          "name": "Maria Cantwell",
+          "party": "D",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/C000127.jpg",
+          "stance": "no_stance",
+          "rfkVote": "no",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        },
+        {
+          "bioguide": "M001111",
+          "name": "Patty Murray",
+          "party": "D",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/M001111.jpg",
+          "stance": "opposes",
+          "rfkVote": "no",
+          "statementDate": "2026-08-10",
+          "statementSummary": "Publicly urged parents to ignore the executive order, rejected a vaccine-autism link and told parents to follow their doctors rather than Trump or RFK Jr.",
+          "sourceUrl": "https://www.theguardian.com/us-news/live/2026/aug/10/ohio-republicans-max-miller-domestic-abuse-allegations-us-politics-live-latest-news",
+          "secondarySourceUrl": "https://www.ibtimes.co.uk/doctors-criticise-trumps-new-vaccine-order-1813596",
+          "evidenceConfidence": "Medium",
+          "verificationNote": "Two outlets quoted her Aug. 10 social posts; no direct official post was retrievable in the audit environment."
+        }
+      ]
+    },
+    "WI": {
+      "stateName": "Wisconsin",
+      "senators": [
+        {
+          "bioguide": "J000293",
+          "name": "Ron Johnson",
+          "party": "R",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/J000293.jpg",
+          "stance": "no_stance",
+          "rfkVote": "yes",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        },
+        {
+          "bioguide": "B001230",
+          "name": "Tammy Baldwin",
+          "party": "D",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/B001230.jpg",
+          "stance": "no_stance",
+          "rfkVote": "no",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        }
+      ]
+    },
+    "WV": {
+      "stateName": "West Virginia",
+      "senators": [
+        {
+          "bioguide": "J000312",
+          "name": "Jim Justice",
+          "party": "R",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/J000312.jpg",
+          "stance": "no_stance",
+          "rfkVote": "yes",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        },
+        {
+          "bioguide": "C001047",
+          "name": "Shelley Capito",
+          "party": "R",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/C001047.jpg",
+          "stance": "no_stance",
+          "rfkVote": "yes",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        }
+      ]
+    },
+    "WY": {
+      "stateName": "Wyoming",
+      "senators": [
+        {
+          "bioguide": "L000571",
+          "name": "Cynthia Lummis",
+          "party": "R",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/L000571.jpg",
+          "stance": "no_stance",
+          "rfkVote": "yes",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        },
+        {
+          "bioguide": "B001261",
+          "name": "John Barrasso",
+          "party": "R",
+          "photoUrl": "https://unitedstates.github.io/images/congress/225x275/B001261.jpg",
+          "stance": "no_stance",
+          "rfkVote": "yes",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null,
+          "secondarySourceUrl": null,
+          "evidenceConfidence": null,
+          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+        }
+      ]
+    },
+    "DC": {
+      "stateName": "District of Columbia",
+      "status": "no_senate_seats",
+      "senators": []
+    }
+  },
+  "demo": {
+    "XA": {
+      "stateName": "Sample State A (Demo)",
+      "senators": [
+        {
+          "bioguide": null,
+          "name": "Senator A. Placeholder",
+          "party": "R",
+          "photoUrl": null,
+          "stance": "supports",
+          "rfkVote": "yes",
+          "statementDate": "2026-05-14",
+          "statementSummary": "Placeholder statement text demonstrating the 'supports' layout — replace with a real, sourced quote or paraphrase.",
+          "sourceUrl": "https://example.com/placeholder-source"
+        },
+        {
+          "bioguide": null,
+          "name": "Senator B. Sample",
+          "party": "D",
+          "photoUrl": null,
+          "stance": "opposes",
+          "rfkVote": "no",
+          "statementDate": "2026-04-28",
+          "statementSummary": "Placeholder statement text demonstrating the 'opposes' layout — replace with a real, sourced quote or paraphrase.",
+          "sourceUrl": "https://example.com/placeholder-source"
+        }
+      ]
+    },
+    "XB": {
+      "stateName": "Sample State B (Demo)",
+      "senators": [
+        {
+          "bioguide": null,
+          "name": "Senator C. Example",
+          "party": "R",
+          "photoUrl": null,
+          "stance": "no_stance",
+          "rfkVote": "not_serving",
+          "statementDate": null,
+          "statementSummary": null,
+          "sourceUrl": null
+        },
+        {
+          "bioguide": null,
+          "name": "Senator D. Mockdata",
+          "party": "I",
+          "photoUrl": null,
+          "stance": "unclear",
+          "rfkVote": "yes",
+          "statementDate": "2026-03-02",
+          "statementSummary": "Placeholder statement text demonstrating the 'unclear/mixed' layout — replace with a real, sourced quote or paraphrase.",
+          "sourceUrl": "https://example.com/placeholder-source"
+        }
+      ]
+    }
+  },
+  "researchCutoff": "2026-08-18 (approx. 1:00 p.m. ET)"
+}

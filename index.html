@@ -40,6 +40,7 @@
   <meta name="twitter:site" content="@Measles2026" />
 
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Lora:ital,wght@0,400;0,600;1,400&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/eo-tracker.css" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root { --yellow: #F5C218; --navy: #1B2A4A; --red: #C0392B; --cream: #FAF7F0; --gray: #F2F2F2; --dark: #111111; --text: #222222; }
@@ -63,19 +64,97 @@
     .social-icons--popup a:hover { color: var(--red); opacity: 1; }
     .social-icons--popup svg { width: 20px; height: 20px; }
     .popup-social-label { text-align: center; font-family: 'Oswald', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #999; padding-top: 4px; }
-    .nav-links { display: flex; gap: 32px; list-style: none; }
-    .nav-links a { font-family: 'Oswald', sans-serif; font-size: 14px; font-weight: 600; color: #fff; text-decoration: none; letter-spacing: 1px; text-transform: uppercase; opacity: 0.85; transition: opacity .2s; }
+    .nav-links { display: flex; gap: 20px; list-style: none; }
+    .nav-links a { font-family: 'Oswald', sans-serif; font-size: 13px; font-weight: 600; color: #fff; text-decoration: none; letter-spacing: 1px; text-transform: uppercase; opacity: 0.85; transition: opacity .2s; white-space: nowrap; }
     .nav-links a:hover { opacity: 1; color: var(--yellow); }
     .nav-cta { background: var(--red); color: #fff; font-family: 'Oswald', sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; padding: 10px 22px; border-radius: 3px; transition: background .2s; }
     .nav-cta:hover { background: #a93226; }
-    .nav-cta-alt { background: transparent; color: var(--yellow); font-family: 'Oswald', sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; padding: 9px 18px; border-radius: 3px; border: 2px solid var(--yellow); transition: background .2s, color .2s; cursor: pointer; }
-    .nav-cta-alt:hover { background: var(--yellow); color: var(--navy); }
-    .nav-cta-group { display: flex; align-items: center; gap: 10px; }
     .btn-host { background: var(--red); color: #fff; font-family: 'Oswald', sans-serif; text-decoration: none; padding: 14px 44px 12px; border-radius: 3px; border: none; cursor: pointer; transition: background .2s, transform .15s; display: inline-flex; flex-direction: column; align-items: center; line-height: 1.1; }
     .btn-host:hover { background: #a93226; transform: translateY(-1px); }
     .btn-host .btn-host-main { font-size: 16px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
     .btn-host .btn-host-sub { font-family: 'Lora', serif; font-style: italic; font-size: 12px; font-weight: 400; letter-spacing: 0.5px; opacity: 0.92; margin-top: 4px; text-transform: none; }
     .hero-host-row { margin-top: 18px; display: flex; justify-content: center; }
+
+    /* TEMPORARY EO CAMPAIGN MASTHEAD — additive layer above the existing
+       nav/hero, not a replacement for either. See assets/js/eo-masthead.js
+       to disable (EO_MASTHEAD_ENABLED = false) and remove cleanly later.
+       Background photo, scrim and vignette are visual-only layers behind
+       .eo-masthead-inner — swapping the photo or retuning the gradient later
+       never touches the copy, CTA, nav-dock, or visibility logic below. */
+    .eo-masthead {
+      position: relative;
+      min-height: calc(100svh - 64px); /* masthead + docked nav ≈ one viewport */
+      display: flex; align-items: center;
+      padding: 0 40px;
+      background: var(--navy); /* shows briefly while the photo loads */
+      overflow: hidden;
+    }
+    .eo-masthead-bg { position: absolute; inset: 0; z-index: 0; }
+    .eo-masthead-bg img {
+      width: 100%; height: 100%; display: block;
+      object-fit: cover; object-position: 50% 15%;
+    }
+    .eo-masthead-scrim {
+      position: absolute; inset: 0;
+      background: linear-gradient(90deg,
+        rgba(19, 30, 56, .85) 0%,
+        rgba(19, 30, 56, .78) 38%,
+        rgba(19, 30, 56, .64) 62%,
+        rgba(19, 30, 56, .46) 82%,
+        rgba(19, 30, 56, .40) 100%);
+    }
+    .eo-masthead-vignette {
+      position: absolute; inset: 0; pointer-events: none;
+      box-shadow: inset 0 0 min(180px, 14vw) rgba(0,0,0,.35);
+    }
+    .eo-masthead-inner {
+      position: relative; z-index: 1;
+      width: 100%; max-width: 1160px; margin: 0 auto;
+    }
+    .eo-masthead-copy { max-width: 620px; text-align: left; }
+    .eo-masthead-eyebrow { margin-bottom: 16px; }
+    .eo-masthead-eyebrow .spotted-text { font-size: clamp(26px, 3.6vw, 40px); }
+    .eo-masthead-headline {
+      font-family: 'Oswald', sans-serif; font-weight: 700; text-transform: uppercase;
+      font-size: clamp(30px, 4.4vw, 52px); line-height: 1.1; letter-spacing: 1px;
+      color: var(--yellow); margin-bottom: 20px;
+      text-shadow: 0 2px 12px rgba(0,0,0,.35);
+    }
+    .eo-masthead-body {
+      font-family: 'Open Sans', sans-serif; font-size: clamp(16px, 1.6vw, 19px); line-height: 1.6;
+      color: rgba(255,255,255,.92); max-width: 600px; margin: 0 0 28px;
+      text-shadow: 0 1px 8px rgba(0,0,0,.3);
+    }
+    .eo-masthead-ctas { display: flex; gap: 16px; flex-wrap: wrap; }
+    .eo-masthead-ctas .btn-outline { background: rgba(19, 30, 56, .35); }
+    /* Docked-nav band: self-scoping via adjacent-sibling selector, so this
+       only applies when the masthead is present directly before <nav> —
+       no change to nav's base rules or its behavior on other pages. */
+    .eo-masthead + nav {
+      background: #141f38;
+      border-top: 2px solid rgba(245, 194, 24, .55);
+    }
+    @media (max-width: 900px) {
+      .eo-masthead { padding: 0 24px; }
+      .eo-masthead-bg img { object-position: 62% 12%; }
+      .eo-masthead-copy { max-width: 100%; }
+    }
+    @media (max-width: 640px) {
+      /* No forced one-viewport min-height here (unlike desktop): matching
+         the exact fold on a narrow, tall viewport crops too much of the
+         scene to keep Mr. Measles and the signing moment both legible. */
+      .eo-masthead { min-height: 78svh; padding: 0 20px; }
+      .eo-masthead-inner { padding: 96px 0 48px; }
+      .eo-masthead-bg img { object-position: 68% 10%; }
+      /* Text is centered (not left-aligned) at this width, so the desktop
+         left-to-right scrim doesn't apply — a stronger flat wash keeps the
+         copy readable wherever it lands over the photo. */
+      .eo-masthead-scrim { background: rgba(19, 30, 56, .78); }
+      .eo-masthead-copy { text-align: center; margin: 0 auto; }
+      .eo-masthead-body { margin-left: auto; margin-right: auto; }
+      .eo-masthead-ctas { justify-content: center; flex-direction: column; align-items: stretch; width: 100%; }
+      .eo-masthead-ctas .btn-primary, .eo-masthead-ctas .btn-outline { width: 100%; text-align: center; }
+    }
 
     /* HERO */
     .hero { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 80px 40px; position: relative; background: var(--navy); background-image: url('/assets/img/hero-bg.jpg'); background-size: cover; background-position: center; }
@@ -275,8 +354,14 @@
     .ic-logo-wrap img:hover { opacity: .75; }
 
     /* RESPONSIVE */
+    /* Nav-links hide earlier than the general mobile breakpoint below — at
+       normal nav font/gap sizing, "Executive Order" plus the existing links
+       needs ~1135px minimum to stay on one line without wrapping or overflow. */
+    @media (max-width: 1180px) {
+      .nav-links { display: none; } .social-icons--nav { display: none; }
+    }
     @media (max-width: 860px) {
-      nav { padding: 0 20px; } .nav-links { display: none; } .nav-cta-alt { display: none; } .social-icons--nav { display: none; } section { padding: 64px 24px; }
+      nav { padding: 0 20px; } section { padding: 64px 24px; }
       .platform-grid, .cyr-inner { grid-template-columns: 1fr; }
       .trail-grid { grid-template-columns: 1fr 1fr; }
       .bobby-quote-text { padding: 32px; }
@@ -478,6 +563,26 @@
 
 <div id="mainContent">
 
+<!-- TEMPORARY EO CAMPAIGN MASTHEAD (additive — see assets/js/eo-masthead.js) -->
+<section class="eo-masthead" id="eo-masthead">
+  <div class="eo-masthead-bg" aria-hidden="true">
+    <img src="/assets/img/eo-masthead-oval-office.jpg" alt="" />
+    <div class="eo-masthead-scrim"></div>
+    <div class="eo-masthead-vignette"></div>
+  </div>
+  <div class="eo-masthead-inner">
+    <div class="eo-masthead-copy">
+      <p class="eo-masthead-eyebrow"><span class="spotted-text">I'm Back.</span></p>
+      <h2 class="eo-masthead-headline">Washington Is Doing My Campaigning For Me.</h2>
+      <p class="eo-masthead-body">I've been keeping score on the vaccine executive order. See where your senators stand and whether they're helping me make a comeback.</p>
+      <div class="eo-masthead-ctas">
+        <a href="vaccine-eo-tracker.html" class="btn-primary" data-eo-track="eo_masthead_tracker_click">See Where Your Senators Stand</a>
+        <a href="vaccine-eo-tracker.html#pledge" class="btn-outline" data-eo-track="eo_masthead_pledge_click">Sign the Pledge</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- NAV -->
 <nav>
   <div class="nav-left">
@@ -500,12 +605,10 @@
     <li><a href="#trail">On the Trail</a></li>
     <li><a href="#map">Outbreak Map</a></li>
     <li><a href="#supporters">Supporters</a></li>
+    <li><a href="vaccine-eo-tracker.html">Executive Order</a></li>
     <li><a href="#cyr">Contact Your Rep</a></li>
   </ul>
-  <div class="nav-cta-group">
-    <button type="button" class="nav-cta-alt" data-host-open>Bring Measles to Your Town</button>
-    <a href="#cyr" class="nav-cta">Take Action</a>
-  </div>
+  <a href="#cyr" class="nav-cta">Take Action</a>
 </nav>
 
 <!-- HERO -->
@@ -818,7 +921,7 @@
   <p class="footer-tagline">"Making Sure Measles Is Here to Stay"</p>
   <p style="font-family:'Open Sans',sans-serif; font-size:13px; color:rgba(255,255,255,.45); margin-bottom:24px;">Press inquiries: <a href="mailto:press@mrmeasles.com" style="color:rgba(255,255,255,.65); text-decoration:underline;">press@mrmeasles.com</a></p>
   <div class="footer-nav">
-    <a href="#about">About</a><a href="#platform">Issues</a><a href="#trail">On the Trail</a><a href="#map">Outbreak Map</a><a href="#supporters">Supporters</a><a href="#cyr">Contact Your Rep</a>
+    <a href="#about">About</a><a href="#platform">Issues</a><a href="#trail">On the Trail</a><a href="#map">Outbreak Map</a><a href="#supporters">Supporters</a><a href="vaccine-eo-tracker.html">Vaccine EO Tracker</a><a href="#cyr">Contact Your Rep</a>
   </div>
   <div class="social-icons social-icons--footer">
     <a href="https://www.facebook.com/people/MrMeasles/61563634500217/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
@@ -833,7 +936,7 @@
   </div>
   <div class="footer-disclaimer">
     <span class="disc-label">⚠ Satire & Parody Disclaimer</span>
-    <p>This website is a work of political satire produced by Informed Consumer, a 501(c)(4) social welfare organization dedicated to consumer education and advocacy. Mr. Measles is not a real candidate for public office. All quotes attributed to Mr. Measles, his family, and public figures — including Secretary Robert F. Kennedy Jr. — are entirely fabricated parody and do not represent actual statements by those individuals. The campaign photography depicts an actor. This site was created to raise awareness about the resurgence of measles in the United States, declining childhood vaccination rates, and the preventable nature of this public health crisis. The outbreak data presented in the map section reflects publicly reported figures from the CDC and the Johns Hopkins International Vaccine Access Center, and is real.</p>
+    <p>This website is a work of political satire produced by Informed Consumer, a 501(c)(4) social welfare organization dedicated to consumer education and advocacy. Mr. Measles is not a real candidate for public office. All quotes attributed to Mr. Measles, his family, and public figures — including Secretary Robert F. Kennedy Jr. — are entirely fabricated parody and do not represent actual statements by those individuals. The campaign photography depicts an actor. This site was created to raise awareness about the resurgence of measles in the United States, declining childhood vaccination rates, and the preventable nature of this public health crisis. The outbreak data presented in the map section reflects publicly reported figures from the CDC and the Johns Hopkins International Vaccine Access Center, and is real. Senator positions and RFK confirmation vote records shown in the Vaccine Executive Order Tracker are drawn from public statements, voting records, and official sources; entries marked "Sample data" are placeholders and do not depict real senators.</p>
   </div>
   <div class="ic-logo-wrap">
     <img src="/assets/img/trail-informed-consumer.png" alt="Informed Consumer" />
@@ -1196,6 +1299,9 @@
   }, { once: true });
 })();
 </script>
+
+<script src="assets/js/eo-masthead.js" defer></script>
+<script src="assets/js/eo-tracker-ribbon.js" defer></script>
 
 </body>
 </html>
