@@ -4,11 +4,13 @@
 (function () {
   var DATA_URL = 'assets/data/eo-tracker-senators.json';
 
+  // Only three public stances by design — no "unclear" or "under review"
+  // state. Any record that isn't a clean Supports/Opposes is No public
+  // stance identified (see assets/data/eo-tracker-senators.json's "note").
   var STANCE_LABELS = {
     supports: { label: 'Supports the EO', icon: '▲' },
     opposes: { label: 'Opposes the EO', icon: '▼' },
-    no_stance: { label: 'No public stance identified', icon: '–' },
-    unclear: { label: 'Unclear / Mixed', icon: '≈' }
+    no_stance: { label: 'No public stance identified', icon: '–' }
   };
 
   // Mr. Measles' in-character reaction to each stance — campaign commentary,
@@ -17,8 +19,7 @@
   var MEASLES_REACTIONS = {
     supports: 'Finally, someone who understands what’s good for my campaign.',
     opposes: 'Ugh. Another one standing between me and a comeback.',
-    no_stance: 'Silence works for me. Every day they sit this one out is another day I get to keep doing my thing.',
-    unclear: 'Still deciding? Take your time. I’m very patient.'
+    no_stance: 'Silence works for me. Every day they sit this one out is another day I get to keep doing my thing.'
   };
 
   var RFK_VOTE_LABELS = {
@@ -107,6 +108,38 @@
     var card = el('div', { class: 'senator-card is-placeholder is-no-seats' },
       '<p>' + escapeHtml(stateName) + ' does not have voting representation in the U.S. Senate.</p>');
     return card;
+  }
+
+  var TALLY_ORDER = [
+    { key: 'opposes', label: 'Opposes' },
+    { key: 'supports', label: 'Supports' },
+    { key: 'no_stance', label: 'No Stance' }
+  ];
+
+  // National totals across all 100 real senators — a fixed summary of the
+  // whole dataset, not scoped to whichever state is currently selected.
+  // Only three buckets by design (see STANCE_LABELS) — anything that isn't a
+  // clean supports/opposes counts as no_stance.
+  function renderTally() {
+    var row = document.getElementById('eo-tally-row');
+    if (!row || !data || !data.states) return;
+
+    var counts = { supports: 0, opposes: 0, no_stance: 0 };
+    Object.keys(data.states).forEach(function (code) {
+      var senators = data.states[code].senators || [];
+      senators.forEach(function (senator) {
+        var key = counts[senator.stance] != null ? senator.stance : 'no_stance';
+        counts[key] += 1;
+      });
+    });
+
+    row.innerHTML = TALLY_ORDER.map(function (item) {
+      return '<span class="eo-tally-item">' +
+        '<i class="legend-dot legend-dot--' + item.key + '" aria-hidden="true"></i>' +
+        '<strong class="eo-tally-number">' + (counts[item.key] || 0) + '</strong>' +
+        '<span class="eo-tally-label">' + item.label + '</span>' +
+      '</span>';
+    }).join('');
   }
 
   var data = null;
@@ -489,6 +522,7 @@
         initShare();
         initMethodology();
         renderMap();
+        renderTally();
 
         // Cross-page entry point: any link ending in #pledge (e.g. the
         // homepage masthead's "Sign the Pledge" CTA) auto-expands the

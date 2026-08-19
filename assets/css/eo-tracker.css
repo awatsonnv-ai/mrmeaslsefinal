@@ -287,7 +287,6 @@
 .legend-dot--supports { background: var(--yellow); }
 .legend-dot--opposes { background: var(--navy); }
 .legend-dot--no_stance { background: var(--gray); border: 1px solid #ccc; }
-.legend-dot--unclear { background: #fff; border: 2px dashed #aaa; }
 
 /* Map + results body — single dominant column by default, splits into a
    two-column explorer once a state is selected. The map never disappears. */
@@ -328,6 +327,26 @@
   color: #777;
 }
 .eo-tracker-body.has-selection .eo-tracker-prompt { display: none; }
+
+/* National tally — a fixed summary of all 100 senators, always visible above
+   the map regardless of which state is selected (see renderTally() in
+   eo-tracker.js). Reuses .legend-dot's color coding for consistency with the
+   legend above. */
+.eo-tally-row {
+  display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+  gap: 8px 22px;
+  margin-bottom: 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #ece7da;
+}
+.eo-tally-item {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-family: 'Open Sans', sans-serif; font-size: 13px; color: #777;
+  white-space: nowrap;
+}
+.eo-tally-number {
+  font-family: 'Oswald', sans-serif; font-weight: 700; font-size: 19px; color: var(--navy);
+}
 
 .eo-map {
   background: var(--cream);
@@ -444,7 +463,6 @@
 .stance-badge--supports { background: var(--yellow); color: var(--navy); }
 .stance-badge--opposes { background: var(--navy); color: var(--yellow); }
 .stance-badge--no_stance { background: var(--gray); color: #555; border: 1px solid #ddd; }
-.stance-badge--unclear { background: #fff; color: #777; border: 2px dashed #bbb; }
 
 .rfk-vote-row { font-family: 'Open Sans', sans-serif; font-size: 15px; color: #555; margin-bottom: 12px; }
 .rfk-vote-row strong { color: var(--navy); }

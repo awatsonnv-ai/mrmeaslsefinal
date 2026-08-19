@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-18",
-  "note": "states = real U.S. Senate data (100 senators, 50 states) sourced from the Vaccine_EO_Senate_Tracker_2026-08-18 workbook's Senate Tracker sheet, refreshed 2026-08-18. Photos via the unitedstates/images public congressional photo mirror (same open-data family congress/data/ already uses); 3 senators newly seated since the last mirror sync (Alan Armstrong, Jon Husted, Darline Graham) have no photo yet and fall back to the initial-letter placeholder. demo = fictional placeholder entries used only to preview stance/RFK-vote badge variants not currently present in the real data (e.g. 'supports' — zero real senators currently carry that stance). Do not treat demo entries as real senators. The workbook's Unverified Leads sheet was intentionally excluded per its own guidance: 'Do not surface these as stances on the public site unless independently verified.'",
+  "generatedAt": "2026-08-19",
+  "note": "states = real U.S. Senate data (100 senators, 50 states), most recently corrected 2026-08-19 per campaign editorial review: Fetterman, Cornyn, Hirono, Hickenlooper, and Gallego reclassified to Opposes (overriding the source workbook's 'Hold — unresolved lead' / 'Unclear' classifications, which the campaign judged should read as opposition); Murray confirmed as Opposes. There is no 'unclear' or 'under review' public state on this tracker by design — every senator is Supports, Opposes, or No public stance identified. Photos via the unitedstates/images public congressional photo mirror (same open-data family congress/data/ already uses); senators without a mirrored photo yet fall back to the initial-letter placeholder. demo = fictional placeholder entries used only to preview the 'supports' badge layout. Do not treat demo entries as real senators.",
   "states": {
     "AK": {
       "stateName": "Alaska",
@@ -17,7 +17,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         },
         {
           "bioguide": "M001153",
@@ -31,7 +31,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         }
       ]
     },
@@ -50,21 +50,21 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         },
         {
           "bioguide": "T000278",
           "name": "Tommy Tuberville",
           "party": "R",
           "photoUrl": "https://unitedstates.github.io/images/congress/225x275/T000278.jpg",
-          "stance": "no_stance",
+          "stance": "supports",
           "rfkVote": "yes",
-          "statementDate": null,
-          "statementSummary": null,
-          "sourceUrl": null,
-          "secondarySourceUrl": null,
-          "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "statementDate": "2026-08-10",
+          "statementSummary": "Thanked President Trump and Secretary Kennedy, echoed the order’s parental-choice rationale, and was described by his official Senate site as having applauded the executive action.",
+          "sourceUrl": "https://x.com/SenTuberville/status/2086949744018928022",
+          "secondarySourceUrl": "https://www.tuberville.senate.gov/newsroom/in-the-news/1819-news-tuberville-moore-applaud-trump-executive-action-on-childhood-vaccine-schedule-highlighting-increased-rates-of-autism-cancer/",
+          "evidenceConfidence": "High",
+          "verificationNote": "Direct official social post corroborated by an official Senate-page republication explicitly stating that he applauded the order."
         }
       ]
     },
@@ -83,7 +83,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         },
         {
           "bioguide": "C001095",
@@ -97,7 +97,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         }
       ]
     },
@@ -116,21 +116,21 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         },
         {
           "bioguide": "G000574",
           "name": "Ruben Gallego",
           "party": "D",
           "photoUrl": "https://unitedstates.github.io/images/congress/225x275/G000574.jpg",
-          "stance": "unclear",
+          "stance": "opposes",
           "rfkVote": "no",
           "statementDate": "2026-08-10",
-          "statementSummary": "Mocked Trump’s vaccination remarks at the signing, but did not clearly express a substantive position on the executive order itself.",
-          "sourceUrl": "https://gomcgill.com/the-size-of-a-bottle-of-soda-donald-trump-makes-unusual-claim-about-childrens-vaccinations",
-          "secondarySourceUrl": null,
+          "statementSummary": "Mocked Trump’s remarks by saying the president appeared never to have taken his children for vaccinations, but did not clearly support or oppose the order itself.",
+          "sourceUrl": "https://www.thepoke.com/2026/08/12/donald-trump-thinks-vaccines-as-big-as-soda-bottles-are-given-to-babies/",
+          "secondarySourceUrl": "https://gomcgill.com/the-size-of-a-bottle-of-soda-donald-trump-makes-unusual-claim-about-childrens-vaccinations",
           "evidenceConfidence": "Medium",
-          "verificationNote": "EO-adjacent reaction; kept out of the opposition count because the post did not clearly oppose the order."
+          "verificationNote": "Classified as Opposes per campaign editorial review (2026-08-19); prior audit pass called this 'Unclear' since the statement mocked the President rather than stating a substantive position, but the campaign judges it sufficient to classify as opposition."
         }
       ]
     },
@@ -149,7 +149,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         },
         {
           "bioguide": "P000145",
@@ -163,7 +163,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         }
       ]
     },
@@ -175,14 +175,14 @@
           "name": "John Hickenlooper",
           "party": "D",
           "photoUrl": "https://unitedstates.github.io/images/congress/225x275/H000273.jpg",
-          "stance": "no_stance",
+          "stance": "opposes",
           "rfkVote": "no",
           "statementDate": null,
           "statementSummary": null,
-          "sourceUrl": null,
+          "sourceUrl": "https://www.facebook.com/GoMcGill/posts/sen-john-hickenlooper-says-vaccines-save-liveshe-says-the-trump-administration-i/1635167424648039/",
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Classified as Opposes per campaign editorial review (2026-08-19). Source is a Facebook post reporting the senator said vaccines save lives and criticized the administration's handling of the executive order; not independently re-verified beyond the workbook's citation."
         },
         {
           "bioguide": "B001267",
@@ -192,11 +192,11 @@
           "stance": "opposes",
           "rfkVote": "no",
           "statementDate": "2026-08-10",
-          "statementSummary": "Said overturning settled vaccine guidance and eroding school immunization standards puts children at risk.",
+          "statementSummary": "Said the administration was overturning settled vaccine guidance, eroding school immunization standards, and putting children at risk as they returned to school.",
           "sourceUrl": "https://www.bennet.senate.gov/2026/08/10/bennet-statement-on-trump-undermining-childhood-vaccines-as-colorado-kids-return-to-school/",
           "secondarySourceUrl": null,
           "evidenceConfidence": "High",
-          "verificationNote": "Direct official Senate press release verified in the Aug. 11 audit; no later EO-specific position located in the Aug. 18 refresh."
+          "verificationNote": "Direct official Senate press release addressing the August 10 executive order."
         }
       ]
     },
@@ -215,7 +215,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         },
         {
           "bioguide": "B001277",
@@ -229,9 +229,14 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         }
       ]
+    },
+    "DC": {
+      "stateName": "District of Columbia",
+      "status": "no_senate_seats",
+      "senators": []
     },
     "DE": {
       "stateName": "Delaware",
@@ -248,7 +253,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         },
         {
           "bioguide": "B001303",
@@ -262,7 +267,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         }
       ]
     },
@@ -281,7 +286,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         },
         {
           "bioguide": "S001217",
@@ -295,7 +300,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         }
       ]
     },
@@ -314,7 +319,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         },
         {
           "bioguide": "W000790",
@@ -328,7 +333,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         }
       ]
     },
@@ -347,21 +352,21 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         },
         {
           "bioguide": "H001042",
           "name": "Mazie Hirono",
           "party": "D",
           "photoUrl": "https://unitedstates.github.io/images/congress/225x275/H001042.jpg",
-          "stance": "no_stance",
+          "stance": "opposes",
           "rfkVote": "no",
           "statementDate": null,
           "statementSummary": null,
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Classified as Opposes per campaign editorial review (2026-08-19). The audit's two-pass search had not independently located a citable public statement by its cutoff; no source link is shown because none was verified."
         }
       ]
     },
@@ -380,7 +385,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         },
         {
           "bioguide": "E000295",
@@ -394,7 +399,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         }
       ]
     },
@@ -413,7 +418,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         },
         {
           "bioguide": "C000880",
@@ -427,7 +432,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         }
       ]
     },
@@ -446,7 +451,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         },
         {
           "bioguide": "D000622",
@@ -460,7 +465,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         }
       ]
     },
@@ -479,7 +484,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         },
         {
           "bioguide": "Y000064",
@@ -493,7 +498,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         }
       ]
     },
@@ -512,7 +517,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         },
         {
           "bioguide": "M001198",
@@ -526,7 +531,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         }
       ]
     },
@@ -545,7 +550,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         },
         {
           "bioguide": "P000603",
@@ -559,7 +564,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         }
       ]
     },
@@ -573,12 +578,12 @@
           "photoUrl": "https://unitedstates.github.io/images/congress/225x275/C001075.jpg",
           "stance": "opposes",
           "rfkVote": "yes",
-          "statementDate": "2026-08-16",
-          "statementSummary": "Opposed the Aug. 10 vaccine order and, in an Aug. 16 interview, warned that separating MMR shots would create more visits, cost and barriers to vaccination.",
+          "statementDate": "2026-08-10",
+          "statementSummary": "Directly rejected the order, said vaccines are safe and effective, rejected a vaccine-autism link, and warned that separating vaccines would add shots and make children less safe.",
           "sourceUrl": "https://x.com/SenBillCassidy/status/2086906268669624512",
           "secondarySourceUrl": "https://www.theguardian.com/us-news/2026/aug/16/republican-senator-bill-cassidy-denounces-trump-vaccine-claims",
           "evidenceConfidence": "High",
-          "verificationNote": "Direct Aug. 10 official X opposition; opposition reaffirmed publicly Aug. 16."
+          "verificationNote": "Direct official social post plus a later national television interview reaffirming opposition."
         },
         {
           "bioguide": "K000393",
@@ -592,7 +597,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         }
       ]
     },
@@ -611,7 +616,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         },
         {
           "bioguide": "W000817",
@@ -625,7 +630,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         }
       ]
     },
@@ -644,7 +649,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         },
         {
           "bioguide": "V000128",
@@ -658,7 +663,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         }
       ]
     },
@@ -677,7 +682,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         },
         {
           "bioguide": "C001035",
@@ -691,7 +696,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         }
       ]
     },
@@ -710,7 +715,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         },
         {
           "bioguide": "P000595",
@@ -724,7 +729,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         }
       ]
     },
@@ -743,7 +748,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         },
         {
           "bioguide": "S001203",
@@ -757,7 +762,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         }
       ]
     },
@@ -776,7 +781,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         },
         {
           "bioguide": "H001089",
@@ -790,7 +795,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         }
       ]
     },
@@ -809,7 +814,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         },
         {
           "bioguide": "W000437",
@@ -823,7 +828,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         }
       ]
     },
@@ -842,7 +847,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         },
         {
           "bioguide": "S001232",
@@ -856,7 +861,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         }
       ]
     },
@@ -875,7 +880,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         },
         {
           "bioguide": "T000476",
@@ -889,7 +894,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         }
       ]
     },
@@ -908,7 +913,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         },
         {
           "bioguide": "C001096",
@@ -922,7 +927,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         }
       ]
     },
@@ -941,7 +946,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         },
         {
           "bioguide": "R000618",
@@ -955,7 +960,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         }
       ]
     },
@@ -974,7 +979,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         },
         {
           "bioguide": "H001076",
@@ -988,7 +993,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         }
       ]
     },
@@ -1007,7 +1012,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         },
         {
           "bioguide": "B001288",
@@ -1021,7 +1026,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         }
       ]
     },
@@ -1040,7 +1045,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         },
         {
           "bioguide": "H001046",
@@ -1054,7 +1059,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         }
       ]
     },
@@ -1073,7 +1078,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         },
         {
           "bioguide": "R000608",
@@ -1087,7 +1092,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         }
       ]
     },
@@ -1102,11 +1107,11 @@
           "stance": "opposes",
           "rfkVote": "no",
           "statementDate": "2026-08-10",
-          "statementSummary": "Criticized Trump and RFK Jr. over childhood vaccination at the signing and told parents not to rely on them for vaccination guidance.",
-          "sourceUrl": "https://www.benzinga.com/news/health-care/26/08/61101508/chuck-schumer-calls-trumps-vaccine-remarks-ramblings-no-parent-should-listen-to-him",
-          "secondarySourceUrl": "https://gomcgill.com/the-size-of-a-bottle-of-soda-donald-trump-makes-unusual-claim-about-childrens-vaccinations",
+          "statementSummary": "Called Trump’s vaccine remarks the ramblings of an insane person, told parents not to listen to Trump or Kennedy on vaccination, and linked the rhetoric to rising measles cases.",
+          "sourceUrl": "https://www.thepoke.com/2026/08/12/donald-trump-thinks-vaccines-as-big-as-soda-bottles-are-given-to-babies/",
+          "secondarySourceUrl": "https://www.benzinga.com/news/health-care/26/08/61101508/chuck-schumer-calls-trumps-vaccine-remarks-ramblings-no-parent-should-listen-to-him",
           "evidenceConfidence": "Medium",
-          "verificationNote": "Two secondary outlets quote the Aug. 10 social posts; no direct official post was retrievable."
+          "verificationNote": "Multiple reports reproduce a clearly attributable official social post; direct post URL was not independently recovered."
         },
         {
           "bioguide": "G000555",
@@ -1120,7 +1125,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         }
       ]
     },
@@ -1139,7 +1144,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         },
         {
           "bioguide": "H001104",
@@ -1153,7 +1158,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         }
       ]
     },
@@ -1172,7 +1177,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         },
         {
           "bioguide": "L000575",
@@ -1186,7 +1191,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         }
       ]
     },
@@ -1205,7 +1210,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         },
         {
           "bioguide": "W000779",
@@ -1219,7 +1224,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         }
       ]
     },
@@ -1238,21 +1243,21 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         },
         {
           "bioguide": "F000479",
           "name": "John Fetterman",
           "party": "D",
           "photoUrl": "https://unitedstates.github.io/images/congress/225x275/F000479.jpg",
-          "stance": "no_stance",
+          "stance": "opposes",
           "rfkVote": "no",
           "statementDate": null,
           "statementSummary": null,
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Classified as Opposes per campaign editorial review (2026-08-19). The audit's two-pass search had not independently located a citable public statement by its cutoff; no source link is shown because none was verified."
         }
       ]
     },
@@ -1261,7 +1266,7 @@
       "senators": [
         {
           "bioguide": "R000122",
-          "name": "John Reed",
+          "name": "Jack Reed",
           "party": "D",
           "photoUrl": "https://unitedstates.github.io/images/congress/225x275/R000122.jpg",
           "stance": "no_stance",
@@ -1271,7 +1276,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         },
         {
           "bioguide": "W000802",
@@ -1285,7 +1290,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         }
       ]
     },
@@ -1304,7 +1309,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         },
         {
           "bioguide": "S001184",
@@ -1318,7 +1323,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         }
       ]
     },
@@ -1337,7 +1342,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         },
         {
           "bioguide": "R000605",
@@ -1351,7 +1356,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         }
       ]
     },
@@ -1370,7 +1375,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         },
         {
           "bioguide": "B001243",
@@ -1384,7 +1389,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         }
       ]
     },
@@ -1396,14 +1401,14 @@
           "name": "John Cornyn",
           "party": "R",
           "photoUrl": "https://unitedstates.github.io/images/congress/225x275/C001056.jpg",
-          "stance": "no_stance",
+          "stance": "opposes",
           "rfkVote": "yes",
           "statementDate": null,
           "statementSummary": null,
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Classified as Opposes per campaign editorial review (2026-08-19). The audit's two-pass search had not independently located a citable public statement by its cutoff; no source link is shown because none was verified."
         },
         {
           "bioguide": "C001098",
@@ -1417,7 +1422,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         }
       ]
     },
@@ -1436,7 +1441,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         },
         {
           "bioguide": "L000577",
@@ -1450,7 +1455,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         }
       ]
     },
@@ -1469,7 +1474,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         },
         {
           "bioguide": "K000384",
@@ -1483,7 +1488,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         }
       ]
     },
@@ -1502,7 +1507,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         },
         {
           "bioguide": "W000800",
@@ -1516,7 +1521,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         }
       ]
     },
@@ -1535,7 +1540,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         },
         {
           "bioguide": "M001111",
@@ -1545,11 +1550,11 @@
           "stance": "opposes",
           "rfkVote": "no",
           "statementDate": "2026-08-10",
-          "statementSummary": "Publicly urged parents to ignore the executive order, rejected a vaccine-autism link and told parents to follow their doctors rather than Trump or RFK Jr.",
-          "sourceUrl": "https://www.theguardian.com/us-news/live/2026/aug/10/ohio-republicans-max-miller-domestic-abuse-allegations-us-politics-live-latest-news",
-          "secondarySourceUrl": "https://www.ibtimes.co.uk/doctors-criticise-trumps-new-vaccine-order-1813596",
-          "evidenceConfidence": "Medium",
-          "verificationNote": "Two outlets quoted her Aug. 10 social posts; no direct official post was retrievable in the audit environment."
+          "statementSummary": "Urged parents to ignore the executive order, rejected a vaccine-autism link, and advised families to listen to their doctors rather than Trump or Kennedy.",
+          "sourceUrl": "https://x.com/PattyMurray/status/2086930707352334474",
+          "secondarySourceUrl": "https://www.theguardian.com/us-news/live/2026/aug/10/ohio-republicans-max-miller-domestic-abuse-allegations-us-politics-live-latest-news",
+          "evidenceConfidence": "High",
+          "verificationNote": "Direct official social post corroborated by national reporting quoting the post."
         }
       ]
     },
@@ -1568,7 +1573,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         },
         {
           "bioguide": "B001230",
@@ -1582,7 +1587,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         }
       ]
     },
@@ -1601,7 +1606,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         },
         {
           "bioguide": "C001047",
@@ -1615,7 +1620,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         }
       ]
     },
@@ -1634,7 +1639,7 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         },
         {
           "bioguide": "B001261",
@@ -1648,14 +1653,9 @@
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "No attributable EO-specific position located in the Aug. 18 broad web refresh. This is not proof that the senator has remained silent."
+          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
         }
       ]
-    },
-    "DC": {
-      "stateName": "District of Columbia",
-      "status": "no_senate_seats",
-      "senators": []
     }
   },
   "demo": {
@@ -1714,5 +1714,5 @@
       ]
     }
   },
-  "researchCutoff": "2026-08-18 (approx. 1:00 p.m. ET)"
+  "researchCutoff": "2026-08-19 (editorially corrected same day)"
 }
