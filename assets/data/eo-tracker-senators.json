@@ -1,6 +1,6 @@
 {
   "generatedAt": "2026-08-19",
-  "note": "states = real U.S. Senate data (100 senators, 50 states), most recently corrected 2026-08-19 per campaign editorial review: Fetterman, Cornyn, Hirono, Hickenlooper, and Gallego reclassified to Opposes (overriding the source workbook's 'Hold — unresolved lead' / 'Unclear' classifications, which the campaign judged should read as opposition); Murray confirmed as Opposes. There is no 'unclear' or 'under review' public state on this tracker by design — every senator is Supports, Opposes, or No public stance identified. Photos via the unitedstates/images public congressional photo mirror (same open-data family congress/data/ already uses); senators without a mirrored photo yet fall back to the initial-letter placeholder. demo = fictional placeholder entries used only to preview the 'supports' badge layout. Do not treat demo entries as real senators.",
+  "note": "states = real U.S. Senate data (100 senators, 50 states). Most recently updated 2026-08-19: (1) campaign editorial review reclassified Fetterman, Cornyn, Hirono, Hickenlooper, and Gallego to Opposes, overriding the source workbook's 'Hold — unresolved lead' / 'Unclear' classifications; (2) 13 additional senators (Blumenthal, Blunt Rochester, Booker, Coons, A. Kim, Luján, Markey, Merkley, Reed, Rosen, Sanders, Duckworth, Gillibrand) reclassified to Opposes per campaign report of a joint multi-senator letter opposing the executive order — no public copy of that letter was available at update time, so those records carry no source link. There is no 'unclear' or 'under review' public state on this tracker by design — every senator is Supports, Opposes, or No public stance identified. Photos via the unitedstates/images public congressional photo mirror (same open-data family congress/data/ already uses); senators without a mirrored photo yet fall back to the initial-letter placeholder. demo = fictional placeholder entries used only to preview the 'supports' badge layout. Do not treat demo entries as real senators.",
   "states": {
     "AK": {
       "stateName": "Alaska",
@@ -222,14 +222,14 @@
           "name": "Richard Blumenthal",
           "party": "D",
           "photoUrl": "https://unitedstates.github.io/images/congress/225x275/B001277.jpg",
-          "stance": "no_stance",
+          "stance": "opposes",
           "rfkVote": "no",
           "statementDate": null,
           "statementSummary": null,
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
+          "verificationNote": "Signed a joint multi-senator letter opposing the executive order (reported to the campaign 2026-08-19). No public copy of the letter was provided or located at time of update, so no source link is shown."
         }
       ]
     },
@@ -246,28 +246,28 @@
           "name": "Christopher Coons",
           "party": "D",
           "photoUrl": "https://unitedstates.github.io/images/congress/225x275/C001088.jpg",
-          "stance": "no_stance",
+          "stance": "opposes",
           "rfkVote": "no",
           "statementDate": null,
           "statementSummary": null,
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
+          "verificationNote": "Signed a joint multi-senator letter opposing the executive order (reported to the campaign 2026-08-19). No public copy of the letter was provided or located at time of update, so no source link is shown."
         },
         {
           "bioguide": "B001303",
           "name": "Lisa Blunt Rochester",
           "party": "D",
           "photoUrl": "https://unitedstates.github.io/images/congress/225x275/B001303.jpg",
-          "stance": "no_stance",
+          "stance": "opposes",
           "rfkVote": "no",
           "statementDate": null,
           "statementSummary": null,
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
+          "verificationNote": "Signed a joint multi-senator letter opposing the executive order (reported to the campaign 2026-08-19). No public copy of the letter was provided or located at time of update, so no source link is shown."
         }
       ]
     },
@@ -458,14 +458,14 @@
           "name": "Tammy Duckworth",
           "party": "D",
           "photoUrl": "https://unitedstates.github.io/images/congress/225x275/D000622.jpg",
-          "stance": "no_stance",
+          "stance": "opposes",
           "rfkVote": "no",
           "statementDate": null,
           "statementSummary": null,
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
+          "verificationNote": "Signed a joint multi-senator letter opposing the executive order (reported to the campaign 2026-08-19). No public copy of the letter was provided or located at time of update, so no source link is shown."
         }
       ]
     },
@@ -609,14 +609,14 @@
           "name": "Edward Markey",
           "party": "D",
           "photoUrl": "https://unitedstates.github.io/images/congress/225x275/M000133.jpg",
-          "stance": "no_stance",
+          "stance": "opposes",
           "rfkVote": "no",
           "statementDate": null,
           "statementSummary": null,
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
+          "verificationNote": "Signed a joint multi-senator letter opposing the executive order (reported to the campaign 2026-08-19). No public copy of the letter was provided or located at time of update, so no source link is shown."
         },
         {
           "bioguide": "W000817",
@@ -1005,28 +1005,28 @@
           "name": "Andy Kim",
           "party": "D",
           "photoUrl": "https://unitedstates.github.io/images/congress/225x275/K000394.jpg",
-          "stance": "no_stance",
+          "stance": "opposes",
           "rfkVote": "no",
           "statementDate": null,
           "statementSummary": null,
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
+          "verificationNote": "Signed a joint multi-senator letter opposing the executive order (reported to the campaign 2026-08-19). No public copy of the letter was provided or located at time of update, so no source link is shown."
         },
         {
           "bioguide": "B001288",
           "name": "Cory Booker",
           "party": "D",
           "photoUrl": "https://unitedstates.github.io/images/congress/225x275/B001288.jpg",
-          "stance": "no_stance",
+          "stance": "opposes",
           "rfkVote": "no",
           "statementDate": null,
           "statementSummary": null,
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
+          "verificationNote": "Signed a joint multi-senator letter opposing the executive order (reported to the campaign 2026-08-19). No public copy of the letter was provided or located at time of update, so no source link is shown."
         }
       ]
     },
@@ -1038,14 +1038,14 @@
           "name": "Ben Luján",
           "party": "D",
           "photoUrl": "https://unitedstates.github.io/images/congress/225x275/L000570.jpg",
-          "stance": "no_stance",
+          "stance": "opposes",
           "rfkVote": "no",
           "statementDate": null,
           "statementSummary": null,
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
+          "verificationNote": "Signed a joint multi-senator letter opposing the executive order (reported to the campaign 2026-08-19). No public copy of the letter was provided or located at time of update, so no source link is shown."
         },
         {
           "bioguide": "H001046",
@@ -1085,14 +1085,14 @@
           "name": "Jacky Rosen",
           "party": "D",
           "photoUrl": "https://unitedstates.github.io/images/congress/225x275/R000608.jpg",
-          "stance": "no_stance",
+          "stance": "opposes",
           "rfkVote": "no",
           "statementDate": null,
           "statementSummary": null,
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
+          "verificationNote": "Signed a joint multi-senator letter opposing the executive order (reported to the campaign 2026-08-19). No public copy of the letter was provided or located at time of update, so no source link is shown."
         }
       ]
     },
@@ -1118,14 +1118,14 @@
           "name": "Kirsten Gillibrand",
           "party": "D",
           "photoUrl": "https://unitedstates.github.io/images/congress/225x275/G000555.jpg",
-          "stance": "no_stance",
+          "stance": "opposes",
           "rfkVote": "no",
           "statementDate": null,
           "statementSummary": null,
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
+          "verificationNote": "Signed a joint multi-senator letter opposing the executive order (reported to the campaign 2026-08-19). No public copy of the letter was provided or located at time of update, so no source link is shown."
         }
       ]
     },
@@ -1203,14 +1203,14 @@
           "name": "Jeff Merkley",
           "party": "D",
           "photoUrl": "https://unitedstates.github.io/images/congress/225x275/M001176.jpg",
-          "stance": "no_stance",
+          "stance": "opposes",
           "rfkVote": "no",
           "statementDate": null,
           "statementSummary": null,
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
+          "verificationNote": "Signed a joint multi-senator letter opposing the executive order (reported to the campaign 2026-08-19). No public copy of the letter was provided or located at time of update, so no source link is shown."
         },
         {
           "bioguide": "W000779",
@@ -1269,14 +1269,14 @@
           "name": "Jack Reed",
           "party": "D",
           "photoUrl": "https://unitedstates.github.io/images/congress/225x275/R000122.jpg",
-          "stance": "no_stance",
+          "stance": "opposes",
           "rfkVote": "no",
           "statementDate": null,
           "statementSummary": null,
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
+          "verificationNote": "Signed a joint multi-senator letter opposing the executive order (reported to the campaign 2026-08-19). No public copy of the letter was provided or located at time of update, so no source link is shown."
         },
         {
           "bioguide": "W000802",
@@ -1500,14 +1500,14 @@
           "name": "Bernard Sanders",
           "party": "I",
           "photoUrl": "https://unitedstates.github.io/images/congress/225x275/S000033.jpg",
-          "stance": "no_stance",
+          "stance": "opposes",
           "rfkVote": "no",
           "statementDate": null,
           "statementSummary": null,
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
+          "verificationNote": "Signed a joint multi-senator letter opposing the executive order (reported to the campaign 2026-08-19). No public copy of the letter was provided or located at time of update, so no source link is shown."
         },
         {
           "bioguide": "W000800",
