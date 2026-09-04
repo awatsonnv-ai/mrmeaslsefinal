@@ -305,6 +305,11 @@ select:focus,input:focus,textarea:focus{outline:1.31px solid #F2C338}
   </div>
   <img src="assets/informed-consumer.png" alt="Informed Consumer" style="width:183.75px;height:auto;display:block">
 </footer>
+<audio id="bg-music" src="assets/audio/movement-spreading.mp3" preload="auto"></audio>
+<button type="button" onClick="{{ toggleMusic }}" aria-label="{{ musicAria }}" style="position:fixed;bottom:23.63px;right:23.63px;z-index:60;display:flex;align-items:center;gap:7.88px;background:#111111;color:#F2C338;border:1.31px solid #F2C338;padding:9.19px 15.75px;font-family:'Knockout30',Impact,sans-serif;font-size:15.75px;letter-spacing:1.97px;cursor:pointer" style-hover="background:#F2C338;color:#111111">
+  <span style="font-size:18.9px;line-height:1;opacity:{{ musicIconOpacity }}">{{ musicIcon }}</span>
+  <span>THE MOVEMENT IS SPREADING</span>
+</button>
 </div>
 
 
@@ -315,6 +320,7 @@ class Component extends DCLogic {
     if (!localStorage.getItem('mm_popup_seen')) this.setState({ popupOpen: true });
     this._loadSenators();
     this._mountSpeak4();
+    this._initMusic();
     const set = () => {
       const el = document.querySelector('[data-sticky-header]');
       if (el) document.documentElement.style.setProperty('--sticky-h', el.offsetHeight + 'px');
@@ -323,6 +329,32 @@ class Component extends DCLogic {
     window.addEventListener('resize', set);
     this._initDots();
     this._initParallax();
+  }
+  _initMusic() {
+    const a = document.getElementById('bg-music');
+    if (!a) return;
+    a.addEventListener('ended', () => this.setState({ musicPlaying: false }));
+    // Browsers block audible autoplay until the visitor has interacted, so
+    // this usually rejects; the first click anywhere starts it instead —
+    // in practice the popup's close button.
+    this._startMusic();
+    document.addEventListener('click', () => this._startMusic(), { once: true });
+  }
+  _startMusic() {
+    if (this.state && this.state.musicPlaying) return;
+    const a = document.getElementById('bg-music');
+    if (!a) return;
+    a.play().then(() => this.setState({ musicPlaying: true })).catch(() => {});
+  }
+  _toggleMusic() {
+    const a = document.getElementById('bg-music');
+    if (!a) return;
+    if (this.state && this.state.musicPlaying) {
+      a.pause();
+      this.setState({ musicPlaying: false });
+    } else {
+      a.play().then(() => this.setState({ musicPlaying: true })).catch(() => {});
+    }
   }
   _loadSenators() {
     fetch('data/eo-tracker-senators.json')
@@ -496,9 +528,13 @@ class Component extends DCLogic {
       selectedState,
       dropdownOpen: !!(this.state && this.state.dropdownOpen),
       popupOpen: !!(this.state && this.state.popupOpen),
-      closePopup: () => { localStorage.setItem('mm_popup_seen', '1'); this.setState({ popupOpen: false }); },
+      closePopup: () => { localStorage.setItem('mm_popup_seen', '1'); this.setState({ popupOpen: false }); this._startMusic(); },
       toggleDropdown: () => this.setState(s => ({ dropdownOpen: !s.dropdownOpen })),
       pickState: (e) => this.setState({ selectedState: e.currentTarget.dataset.state, dropdownOpen: false }),
+      musicIcon: (this.state && this.state.musicPlaying) ? '\u258C\u258C' : '\u266A',
+      musicIconOpacity: (this.state && this.state.musicPlaying) ? '1' : '0.5',
+      musicAria: (this.state && this.state.musicPlaying) ? 'Pause music' : 'Play music',
+      toggleMusic: () => this._toggleMusic(),
       tickerDur: (this.props.tickerSpeed ?? 40) + 's',
       mapSmiley: (this.props.mapSmiley ?? true) ? 'yes' : 'no',
       noop: (e) => e.preventDefault()
