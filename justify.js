@@ -17,6 +17,9 @@ if (!customElements.get('x-justify')) {
       this.innerHTML='';
       this.style.display='flex';
       this.style.justifyContent='space-between';
+      // a justified line is display:flex/nowrap, so its min-content width is the
+      // whole line; without this it drags every flex ancestor wider than the viewport
+      this.style.minWidth='0';
       if(words){ this.style.gap='0.45em'; this.style.flexWrap='wrap'; }
       const units = words ? t.split(' ') : Array.from(t);
       for(const u of units){
