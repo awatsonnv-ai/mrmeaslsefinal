@@ -1,0 +1,53 @@
+name: Update measles data
+
+# The Johns Hopkins dataset is refreshed Fridays by end of day, so this runs
+# Saturday morning UTC and commits only if the numbers actually moved.
+# Upstream also revises past counts backwards, so figures can fall as well as rise.
+on:
+  schedule:
+    - cron: '0 11 * * 6'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-measles-data
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # The script throws rather than writing zeroes if the feed is missing,
+      # empty, or has changed shape, so a bad upstream day fails loudly here
+      # instead of blanking the site's numbers.
+      - name: Refresh figures from Johns Hopkins
+        run: node scripts/update-measles-data.mjs
+
+      - name: Commit if the figures changed
+        run: |
+          if git diff --quiet -- data/measles-stats.json index.html; then
+            echo "No change in the published figures."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/measles-stats.json index.html
+          SUMMARY=$(node -e "
+            const d = require('./data/measles-stats.json');
+            process.stdout.write(
+              d.totalCases.toLocaleString('en-US') + ' cases, ' +
+              d.reportingJurisdictions + ' jurisdictions, ' +
+              d.epicenterState + ' epicenter (through ' + d.latestDataDate + ')'
+            );
+          ")
+          git commit -m "Update measles figures: $SUMMARY" \
+                     -m "Source: JHU Measles Tracking Team Data (CC BY 4.0)"
+          git push

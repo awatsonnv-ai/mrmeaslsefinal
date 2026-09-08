@@ -1,111 +1,77 @@
-# Mr. Measles Website - Automated Data Updates
+# mrmeasles.com
 
-This website automatically updates measles case data every Thursday using GitHub Actions.
+Single-page satire microsite for the Mr. Measles campaign, produced by Informed
+Consumer. Deployed by Vercel from `main` — pushing to `main` publishes.
 
-## How It Works
+## Layout
 
-1. **GitHub Actions Workflow**: Runs every Thursday at 9:00 AM UTC
-2. **Data Fetching**: Currently uses simulated data (needs implementation)
-3. **HTML Update**: Automatically updates the embedded JavaScript data and statistics
-4. **Auto-commit**: Changes are committed and pushed back to the repository
+| Path | What it is |
+|---|---|
+| `index.html` | The whole page. Styles are inline; the `<style>` block in `<helmet>` holds only shared tokens and media queries. |
+| `support.js` | Design-canvas runtime. Renders the `<x-dc>` template with React and drives `{{ }}` bindings, `<sc-if>` and `<sc-for>`. Do not edit — generated. |
+| `justify.js` | `<x-justify>`, the force-justified wood-type line. Splits text into one span per letter (or per word with `mode="words"`). |
+| `usmap.js` | `<us-measles-map>`, the D3 choropleth. Shades states from `data/measles-stats.json`. |
+| `vendor/` | React, ReactDOM, d3 and topojson, served locally so the page makes no CDN calls. |
+| `data/` | `measles-stats.json` (generated), `eo-tracker-senators.json`, `states-10m.json`. |
+| `scripts/update-measles-data.mjs` | Refreshes the measles figures. See below. |
 
-## Current Status
+## Measles data
 
-✅ **Completed:**
-- GitHub Actions workflow setup
-- HTML update script
-- Password protection removed for public launch
-- **Real Johns Hopkins data integration** - fetches from CSSEGISandData/measles_data
-- County-level data aggregation by state
-- Automated weekly updates every Thursday
+Figures in the "See the spread" panel and the 2025 lines in "My numbers" come
+from the Johns Hopkins Measles Tracking Team's public dataset.
 
-🔄 **In Progress:**
-- Data source monitoring and validation
+- Source: <https://github.com/CSSEGISandData/measles_data> (`measles_county_all_updates.csv`)
+- Licence: CC BY 4.0 — cite as "JHU Measles Tracking Team Data"
+- Upstream refreshes **Fridays, end of day**, and **revises past counts backwards**,
+  so a published figure can fall as well as rise.
+- Counts are **laboratory-confirmed cases only**.
 
-## Data Sources
-
-The site now uses **real-time data** from:
-- **Primary Source**: Johns Hopkins CSSEGISandData measles repository
-- **Data URL**: https://github.com/CSSEGISandData/measles_data
-- **Data File**: measles_county_all_updates.csv (county-level data aggregated by state)
-- **Update Frequency**: Repository updated regularly, our site updates Thursdays
-
-**Data Processing:**
-- Fetches county-level measles case data
-- Aggregates cases by state
-- Updates map, statistics, and timestamps automatically
-
-## Implementation Notes
-
-### Data Fetching Challenge
-The Johns Hopkins site uses Cloudflare protection, making direct scraping difficult. Potential solutions:
-
-1. **API Access**: Check if Johns Hopkins provides an API or data export
-2. **CDC Data**: Use CDC's surveillance data APIs
-3. **Manual Override**: Allow manual data entry when automated fetching fails
-4. **Alternative Sources**: Use WHO or other international health organization data
-
-### Current Script Behavior
-The `update-measles-data.js` script:
-- Fetches real measles case data from Johns Hopkins GitHub repository
-- Parses county-level CSV data and aggregates by state
-- Updates the `CASES` object in `index.html` with current data
-- Updates statistics displays (total cases, reporting states)
-- Updates the "Updated" timestamp with current date
-- Uses data from CSSEGISandData/measles_data repository
-
-## Manual Testing
-
-To test the update process locally:
+`.github/workflows/update-measles-data.yml` runs the script Saturdays at 11:00
+UTC and commits only if a figure actually moved. Run it by hand from the Actions
+tab, or locally:
 
 ```bash
-npm install
-npm run update-data
+node scripts/update-measles-data.mjs
 ```
 
-## Deployment
+The script writes `data/measles-stats.json` and refreshes the one-line
+`MEASLES_FALLBACK` literal in `index.html`, which the page uses if that fetch
+fails. It throws rather than writing zeroes if the feed is missing or its shape
+changes, so a bad upstream day fails the job instead of blanking the site.
 
-The site will automatically update every Thursday. If you need to trigger an update manually:
+### What updates automatically
 
-1. Go to the repository's Actions tab
-2. Find the "Update Measles Data" workflow
-3. Click "Run workflow"
+- Cases so far this year, and jurisdictions reporting
+- The epicenter card — **both the state name and its count**, following whichever
+  jurisdiction leads. "Jurisdictions" counts DC alongside the 50 states.
+- Map shading, bucketed to match the on-page legend exactly:
+  `#141414` none · `#E17E8D` 1–50 · `#E8232F` 50–100+ · `#F2C338` epicenter
+  (the smiley marker relocates to the epicenter's centroid)
+- The 2025 case and jurisdiction counts in "My numbers"
 
-## Future Improvements
+### What is deliberately hardcoded
 
-- [ ] Implement actual data scraping/API integration
-- [ ] Add data validation and error handling
-- [ ] Create backup data sources
-- [ ] Add email notifications for update failures
-- [ ] Implement data quality checks
-- [ ] Add historical data tracking
+Two percentages are **not** in this dataset and are not touched by the script:
 
-## Congress ZIP Lookup
+- **"94% outbreak-associated"** — the dataset has no outbreak field. Its
+  `outcome_type` column distinguishes imported from local cases, which is a
+  different measure.
+- **"90% of 2025 cases were in unvaccinated individuals"** — derivable only for
+  the ~28% of 2025 cases that carry a reported vaccination status, so it cannot
+  be stated as a share of all cases.
 
-This repo now includes a ZIP/ZCTA-based Congress lookup for the "Contact Your Representatives" section.
+Both were kept as-is by decision. If either is ever revisited, the dataset does
+support *locally acquired* share and *unvaccinated among cases with a reported
+status*, either of which could be automated.
 
-### What was added
+The campaign year is pinned via `CURRENT_YEAR` in the script because the page
+copy names the years in text ("cases in 2026 so far"). Rolling into a new year
+means editing both.
 
-- `congress/scripts/build-congress-data.mjs` builds current member and ZIP lookup data.
-- `congress/data/` stores generated JSON files after the build runs.
-- `assets/js/congress-lookup.js` powers the front-end ZIP lookup.
-- The site copy now notes that some ZIP codes span multiple House districts and may require address/district confirmation.
-- Member records include party status via the `party` field, plus `caucus` where available.
-
-### Build the Congress lookup data
+## Local preview
 
 ```bash
-npm run build:congress
+python3 -m http.server 8000
 ```
 
-Generated files:
-
-- `congress/data/members_current.json`
-- `congress/data/zip_to_districts.json`
-- `congress/data/zip_to_members.json`
-- `congress/data/member_office_zipcodes.json`
-- `congress/data/metadata.json`
-
-### ZIP-code caveat
-
-The lookup uses Census ZIP Code Tabulation Areas (ZCTAs), not full street-address geocoding. Some 5-digit ZIP codes overlap multiple congressional districts. When that happens, the lookup returns all matching House representatives and flags the result as ambiguous.
+Relative `fetch()` calls mean `file://` will not work — serve it.

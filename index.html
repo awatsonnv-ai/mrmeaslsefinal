@@ -268,8 +268,8 @@ select:focus,input:focus,textarea:focus{outline:1.31px solid #F2C338}
     <span style="color:#ffffff">2026</span>
   </div>
   <div style="display:flex;flex-direction:column">
-    <div style="display:grid;grid-template-columns:var(--stat-cols);gap:21px;align-items:center;border-top:0.66px solid #6a6a6a;padding:23.63px 0"><div style="font-family:'Knockout30',Impact,sans-serif;font-size:clamp(66.15px,7.09vw,113.4px);line-height:1;color:#F2C338">2,144</div><div style="font-family:'Knockout30',Impact,sans-serif;font-size:clamp(18.9px,1.91vw,25.99px);letter-spacing:1.64px;line-height:1.6;color:#ffffff"><x-justify mode="words">CONFIRMED CASES IN 2025. THE WORST IN 34 YEARS. I'M GOOD AT WHAT I DO.</x-justify></div></div>
-    <div style="display:grid;grid-template-columns:var(--stat-cols);gap:21px;align-items:center;border-top:0.66px solid #6a6a6a;padding:23.63px 0"><div style="font-family:'Knockout30',Impact,sans-serif;font-size:clamp(66.15px,7.09vw,113.4px);line-height:1;color:#F2C338">26</div><div style="font-family:'Knockout30',Impact,sans-serif;font-size:clamp(18.9px,1.91vw,25.99px);letter-spacing:1.64px;line-height:1.6;color:#ffffff"><x-justify mode="words">STATES WHERE I MADE MY PRESENCE KNOWN IN 2025. REALLY SPREADING OUT.</x-justify></div></div>
+    <div style="display:grid;grid-template-columns:var(--stat-cols);gap:21px;align-items:center;border-top:0.66px solid #6a6a6a;padding:23.63px 0"><div style="font-family:'Knockout30',Impact,sans-serif;font-size:clamp(66.15px,7.09vw,113.4px);line-height:1;color:#F2C338">{{ prevCasesTotal }}</div><div style="font-family:'Knockout30',Impact,sans-serif;font-size:clamp(18.9px,1.91vw,25.99px);letter-spacing:1.64px;line-height:1.6;color:#ffffff"><x-justify mode="words">CONFIRMED CASES IN 2025. THE WORST IN 34 YEARS. I'M GOOD AT WHAT I DO.</x-justify></div></div>
+    <div style="display:grid;grid-template-columns:var(--stat-cols);gap:21px;align-items:center;border-top:0.66px solid #6a6a6a;padding:23.63px 0"><div style="font-family:'Knockout30',Impact,sans-serif;font-size:clamp(66.15px,7.09vw,113.4px);line-height:1;color:#F2C338">{{ prevJurisdictions }}</div><div style="font-family:'Knockout30',Impact,sans-serif;font-size:clamp(18.9px,1.91vw,25.99px);letter-spacing:1.64px;line-height:1.6;color:#ffffff"><x-justify mode="words">STATES WHERE I MADE MY PRESENCE KNOWN IN 2025. REALLY SPREADING OUT.</x-justify></div></div>
     <div style="display:grid;grid-template-columns:var(--stat-cols);gap:21px;align-items:center;border-top:0.66px solid #6a6a6a;padding:23.63px 0"><div style="font-family:'Knockout30',Impact,sans-serif;font-size:clamp(66.15px,7.09vw,113.4px);line-height:1;color:#F2C338">2026</div><div style="font-family:'Knockout30',Impact,sans-serif;font-size:clamp(18.9px,1.91vw,25.99px);letter-spacing:1.64px;line-height:1.6;color:#ffffff"><x-justify mode="words">THE YEAR AMERICA IS POISED TO LOSE MEASLES ELIMINATION STATUS. I'VE BEEN WAITING SINCE '71.</x-justify></div></div>
     <div style="display:grid;grid-template-columns:var(--stat-cols);gap:21px;align-items:center;border-top:0.66px solid #6a6a6a;border-bottom:0.66px solid #6a6a6a;padding:23.63px 0"><div style="font-family:'Knockout30',Impact,sans-serif;font-size:clamp(66.15px,7.09vw,113.4px);line-height:1;color:#F2C338">90%</div><div style="font-family:'Knockout30',Impact,sans-serif;font-size:clamp(18.9px,1.91vw,25.99px);letter-spacing:1.64px;line-height:1.6;color:#ffffff"><x-justify mode="words">OF 2025 CASES WERE IN UNVACCINATED INDIVIDUALS. NOW THAT'S PRECISION.</x-justify></div></div>
   </div>
@@ -291,9 +291,9 @@ select:focus,input:focus,textarea:focus{outline:1.31px solid #F2C338}
       <x-justify>OF MY CAMPAIGN.</x-justify>
     </div>
     <div style="display:flex;flex-direction:column;gap:17.06px">
-      <div style="border-top:1.31px solid #111111;padding-top:9.19px"><div style="font-family:'Knockout30',Impact,sans-serif;font-size:clamp(34px,20cqw,85.05px);line-height:1">1,877</div><div style="font-family:'Knockout30',Impact,sans-serif;font-size:clamp(18.9px,1.91vw,25.99px);letter-spacing:1.64px;line-height:1.6"><x-justify mode="words">CASES IN 2026 SO FAR</x-justify></div></div>
-      <div style="border-top:1.31px solid #111111;padding-top:9.19px"><div style="font-family:'Knockout30',Impact,sans-serif;font-size:clamp(34px,20cqw,85.05px);line-height:1">35</div><div style="font-family:'Knockout30',Impact,sans-serif;font-size:clamp(18.9px,1.91vw,25.99px);letter-spacing:1.64px;line-height:1.6"><x-justify mode="words">JURISDICTIONS REPORTING</x-justify></div></div>
-      <div style="border-top:1.31px solid #111111;padding-top:9.19px"><div style="font-family:'Knockout30',Impact,sans-serif;font-size:clamp(34px,20cqw,85.05px);line-height:1">699</div><div style="font-family:'Knockout30',Impact,sans-serif;font-size:clamp(18.9px,1.91vw,25.99px);letter-spacing:1.64px;line-height:1.6"><x-justify mode="words">SOUTH CAROLINA — THE EPICENTER</x-justify></div></div>
+      <div style="border-top:1.31px solid #111111;padding-top:9.19px"><div style="font-family:'Knockout30',Impact,sans-serif;font-size:clamp(34px,20cqw,85.05px);line-height:1">{{ casesTotal }}</div><div style="font-family:'Knockout30',Impact,sans-serif;font-size:clamp(18.9px,1.91vw,25.99px);letter-spacing:1.64px;line-height:1.6"><x-justify mode="words">CASES IN 2026 SO FAR</x-justify></div></div>
+      <div style="border-top:1.31px solid #111111;padding-top:9.19px"><div style="font-family:'Knockout30',Impact,sans-serif;font-size:clamp(34px,20cqw,85.05px);line-height:1">{{ jurisdictions }}</div><div style="font-family:'Knockout30',Impact,sans-serif;font-size:clamp(18.9px,1.91vw,25.99px);letter-spacing:1.64px;line-height:1.6"><x-justify mode="words">JURISDICTIONS REPORTING</x-justify></div></div>
+      <div style="border-top:1.31px solid #111111;padding-top:9.19px"><div style="font-family:'Knockout30',Impact,sans-serif;font-size:clamp(34px,20cqw,85.05px);line-height:1">{{ epicenterCases }}</div><div style="font-family:'Knockout30',Impact,sans-serif;font-size:clamp(18.9px,1.91vw,25.99px);letter-spacing:1.64px;line-height:1.6"><x-justify mode="words">{{ epicenterLabel }}</x-justify></div></div>
       <div style="border-top:1.31px solid #111111;padding-top:9.19px"><div style="font-family:'Knockout30',Impact,sans-serif;font-size:clamp(34px,20cqw,85.05px);line-height:1">94%</div><div style="font-family:'Knockout30',Impact,sans-serif;font-size:clamp(18.9px,1.91vw,25.99px);letter-spacing:1.64px;line-height:1.6"><x-justify mode="words">OUTBREAK-ASSOCIATED</x-justify></div></div>
     </div>
   </aside>
@@ -318,10 +318,12 @@ select:focus,input:focus,textarea:focus{outline:1.31px solid #F2C338}
 
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;tickerSpeed&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:40,&quot;min&quot;:15,&quot;max&quot;:90,&quot;step&quot;:5,&quot;unit&quot;:&quot;s&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Ticker&quot;},&quot;mapSmiley&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Outbreak map&quot;}}">
+const MEASLES_FALLBACK = {"casesTotal":"3,231","jurisdictions":"45","epicenterCases":"671","epicenterState":"SOUTH CAROLINA","prevCasesTotal":"2,286","prevJurisdictions":"45"}; // updated by scripts/update-measles-data.mjs
 class Component extends DCLogic {
   componentDidMount() {
     if (!localStorage.getItem('mm_popup_seen')) this.setState({ popupOpen: true });
     this._loadSenators();
+    this._loadMeasles();
     this._mountSpeak4();
     this._initMusic();
     const set = () => {
@@ -358,6 +360,12 @@ class Component extends DCLogic {
     } else {
       a.play().then(() => this.setState({ musicPlaying: true })).catch(() => {});
     }
+  }
+  _loadMeasles() {
+    fetch('data/measles-stats.json')
+      .then(r => r.json())
+      .then(d => this.setState({ measles: d }))
+      .catch(err => console.error('[measles] load failed, using fallback:', err));
   }
   _loadSenators() {
     fetch('data/eo-tracker-senators.json')
@@ -525,7 +533,17 @@ class Component extends DCLogic {
       cardFg: CARD_FG[i % 2]
     }));
 
+    const M = (this.state && this.state.measles) || null;
+    const num = (n) => Number(n).toLocaleString('en-US');
+    const epicenterState = M ? String(M.epicenterState).toUpperCase() : MEASLES_FALLBACK.epicenterState;
+
     return {
+      casesTotal: M ? num(M.totalCases) : MEASLES_FALLBACK.casesTotal,
+      jurisdictions: M ? String(M.reportingJurisdictions) : MEASLES_FALLBACK.jurisdictions,
+      epicenterCases: M ? num(M.epicenterCases) : MEASLES_FALLBACK.epicenterCases,
+      epicenterLabel: epicenterState + ' \u2014 THE EPICENTER',
+      prevCasesTotal: M ? num(M.previousTotalCases) : MEASLES_FALLBACK.prevCasesTotal,
+      prevJurisdictions: M ? String(M.previousReportingJurisdictions) : MEASLES_FALLBACK.prevJurisdictions,
       stateOptions,
       senatorCards,
       selectedState,
