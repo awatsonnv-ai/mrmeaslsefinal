@@ -177,41 +177,45 @@ select:focus,input:focus,textarea:focus{outline:1.31px solid #F2C338}
     <x-justify style="color:#F2C338">ON THE VACCINE EXECUTIVE ORDER?</x-justify>
   </div>
   <div style="display:flex;gap:31.5px;align-items:flex-start;flex-wrap:wrap">
-  <div style="display:flex;flex-direction:column;gap:18.38px;flex:1;min-width:min(100%,210px)">
+  <div style="display:flex;flex-direction:column;gap:18.38px;flex:1.4 1 380px;min-width:min(100%,320px)">
     <div style="display:flex;flex-direction:column;gap:7.88px">
-      <span style="font-family:'Knockout30',Impact,sans-serif;font-size:22.05px;letter-spacing:1.97px;color:#F2C338">SELECT YOUR STATE</span>
-      <div style="position:relative">
-        <button type="button" onClick="{{ toggleDropdown }}" style="width:100%;text-align:left;cursor:pointer;appearance:none;background:#111111;border:1.31px solid #F2C338;color:#F2C338;font-family:'Knockout30',Impact,sans-serif;font-size:28.35px;letter-spacing:1.97px;padding:10.5px 13.13px;background-image:linear-gradient(45deg,transparent 50%,#F2C338 50%),linear-gradient(135deg,#F2C338 50%,transparent 50%);background-position:calc(100% - 18.38px) 55%,calc(100% - 11.81px) 55%;background-size:6.56px 6.56px;background-repeat:no-repeat">{{ selectedState }}</button>
-        <sc-if value="{{ dropdownOpen }}" hint-placeholder-val="{{ false }}">
-          <div style="position:absolute;top:100%;left:0;right:0;z-index:20;background:#111111;border:1.31px solid #F2C338;border-top:none">
-            <sc-for list="{{ stateOptions }}" as="st" hint-placeholder-count="0">
-              <div onClick="{{ pickState }}" data-state="{{ st }}" style="cursor:pointer;color:#F2C338;font-family:'Knockout30',Impact,sans-serif;font-size:28.35px;letter-spacing:1.97px;padding:10.5px 13.13px" style-hover="background:#F2C338;color:#111111">{{ st }}</div>
-            </sc-for>
-          </div>
-        </sc-if>
+      <div style="display:flex;align-items:baseline;gap:9.19px;flex-wrap:wrap">
+        <span style="font-family:'Knockout30',Impact,sans-serif;font-size:22.05px;letter-spacing:1.97px;color:#F2C338">SELECT YOUR STATE</span>
+        <span style="font-family:'Knockout30',Impact,sans-serif;font-size:22.05px;letter-spacing:1.97px;color:#ffffff">{{ selectedState }}</span>
+      </div>
+      <div style="background:#111111;border:1.31px solid #F2C338;padding:13.13px">
+        <x-import component-from-global-scope="senate-tracker-map" from="./senatemap.js" selectedstate="{{ selectedState }}" hint-size="100%,340px"></x-import>
       </div>
     </div>
     <p style="margin:0;font-family:'ArialNarrow',Arial,sans-serif;font-size:25.2px;line-height:1.6;color:#9a9a9a;max-width:46ch">Positions drawn from public statements, voting records, and official sources.</p>
   </div>
   <div style="display:flex;flex-direction:column;gap:0;flex:1 1 315px;min-width:0;max-width:100%;margin-top:34.13px">
     <sc-for list="{{ senatorCards }}" as="sen" hint-placeholder-count="2">
-    <article style="background:{{ sen.cardBg }};color:{{ sen.cardFg }};padding:clamp(15.75px,2.63vw,31.5px)">
-      <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(72.19px,118.13px);gap:15.75px;align-items:stretch">
-      <div style="display:flex;flex-direction:column;gap:6.56px">
-        <div style="font-family:'Knockout30',Impact,sans-serif;font-size:clamp(17.06px,1.97vw,25.2px);line-height:1;letter-spacing:0.66px">{{ sen.name }}</div>
-        <div style="font-family:'Knockout30',Impact,sans-serif;font-size:clamp(13.13px,1.45vw,22.05px);letter-spacing:1.64px">{{ sen.meta }}</div>
-        <div style="font-family:'Knockout30',Impact,sans-serif;font-size:clamp(14.44px,1.71vw,26.78px);letter-spacing:1.31px;background:#111111;color:#F2C338;display:inline-block;padding:5.25px 7.88px;width:max-content;max-width:100%;box-sizing:border-box">{{ sen.stance }}</div>
-        <div style="font-family:'Knockout30',Impact,sans-serif;font-size:clamp(13.13px,1.45vw,22.05px);letter-spacing:1.31px">{{ sen.rfk }}</div>
+    <article style="background:{{ sen.cardBg }};color:{{ sen.cardFg }};padding:clamp(12.6px,2vw,21px)">
+      <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(60px,92px);gap:12px;align-items:stretch">
+      <div style="display:flex;flex-direction:column;gap:5.25px">
+        <div style="font-family:'Knockout30',Impact,sans-serif;font-size:clamp(15px,1.7vw,21px);line-height:1;letter-spacing:0.66px">{{ sen.name }}</div>
+        <div style="font-family:'Knockout30',Impact,sans-serif;font-size:clamp(12px,1.2vw,17px);letter-spacing:1.64px">{{ sen.meta }}</div>
+        <div style="font-family:'Knockout30',Impact,sans-serif;font-size:clamp(13px,1.5vw,20px);letter-spacing:1.31px;background:#111111;color:#F2C338;display:inline-block;padding:4.2px 7px;width:max-content;max-width:100%;box-sizing:border-box">{{ sen.stance }}</div>
+        <div style="font-family:'Knockout30',Impact,sans-serif;font-size:clamp(12px,1.2vw,17px);letter-spacing:1.31px">{{ sen.rfk }}</div>
       </div>
       <sc-if value="{{ sen.hasPhoto }}" hint-placeholder-val="{{ true }}">
         <img src="{{ sen.photo }}" alt="{{ sen.alt }}" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
       </sc-if>
       <sc-if value="{{ sen.noPhoto }}" hint-placeholder-val="{{ false }}">
-        <div style="width:100%;height:100%;min-height:98.44px;display:flex;align-items:center;justify-content:center;background:#111111;color:#F2C338;font-family:'Knockout66',Impact,sans-serif;font-size:52.5px;line-height:1">{{ sen.initial }}</div>
+        <div style="width:100%;height:100%;min-height:78px;display:flex;align-items:center;justify-content:center;background:#111111;color:#F2C338;font-family:'Knockout66',Impact,sans-serif;font-size:42px;line-height:1">{{ sen.initial }}</div>
       </sc-if>
       </div>
     </article>
     </sc-for>
+    <div style="display:flex;flex-direction:column;gap:9.19px;margin-top:18.38px">
+      <sc-for list="{{ tallyItems }}" as="t" hint-placeholder-count="3">
+        <div style="display:flex;align-items:baseline;gap:11.81px;border-top:1.31px solid #2b2b2b;padding-top:7.88px">
+          <div style="font-family:'Knockout30',Impact,sans-serif;font-size:clamp(23px,2.5vw,33.6px);line-height:1;color:#F2C338;min-width:2ch">{{ t.n }}</div>
+          <div style="font-family:'ArialNarrow',Arial,sans-serif;font-size:15.75px;letter-spacing:0.66px;color:#c9c9c9;text-transform:uppercase">{{ t.label }}</div>
+        </div>
+      </sc-for>
+    </div>
   </div>
   </div>
 </section>
@@ -332,6 +336,7 @@ class Component extends DCLogic {
     };
     set();
     window.addEventListener('resize', set);
+    document.addEventListener('senate-map-pick', (e) => this.setState({ selectedState: e.detail.state }));
     this._initDots();
     this._initParallax();
   }
@@ -490,8 +495,8 @@ class Component extends DCLogic {
   }
   renderVals() {
     const STANCE = {
-      supports: 'SUPPORTS THE EO',
-      opposes: 'OPPOSES THE EO',
+      supports: 'SUPPORTS THE EXECUTIVE ORDER',
+      opposes: 'OPPOSES THE EXECUTIVE ORDER',
       no_stance: 'NO PUBLIC STANCE IDENTIFIED'
     };
     const RFK = {
@@ -506,6 +511,7 @@ class Component extends DCLogic {
     const data = (this.state && this.state.senatorData) || null;
     const byName = {};
     let stateOptions = [];
+    const stanceCounts = { supports: 0, opposes: 0, no_stance: 0 };
     if (data) {
       for (const key of Object.keys(data.states)) {
         const st = data.states[key];
@@ -513,9 +519,17 @@ class Component extends DCLogic {
         const label = String(st.stateName).toUpperCase();
         byName[label] = st;
         stateOptions.push(label);
+        for (const s of st.senators) {
+          if (Object.prototype.hasOwnProperty.call(stanceCounts, s.stance)) stanceCounts[s.stance]++;
+        }
       }
       stateOptions.sort();
     }
+    const tallyItems = [
+      { n: stanceCounts.opposes, label: (stanceCounts.opposes === 1 ? 'SENATOR OPPOSES' : 'SENATORS OPPOSE') + ' THE EXECUTIVE ORDER' },
+      { n: stanceCounts.supports, label: (stanceCounts.supports === 1 ? 'SENATOR SUPPORTS' : 'SENATORS SUPPORT') + ' THE EXECUTIVE ORDER' },
+      { n: stanceCounts.no_stance, label: (stanceCounts.no_stance === 1 ? 'SENATOR HAS' : 'SENATORS HAVE') + ' NO PUBLIC STANCE' }
+    ];
 
     const selectedState = (this.state && this.state.selectedState) || 'MISSISSIPPI';
     const picked = byName[selectedState];
@@ -546,6 +560,7 @@ class Component extends DCLogic {
       prevJurisdictions: M ? String(M.previousReportingJurisdictions) : MEASLES_FALLBACK.prevJurisdictions,
       stateOptions,
       senatorCards,
+      tallyItems,
       selectedState,
       dropdownOpen: !!(this.state && this.state.dropdownOpen),
       popupOpen: !!(this.state && this.state.popupOpen),
