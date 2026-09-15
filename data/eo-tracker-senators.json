@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-19",
-  "note": "states = real U.S. Senate data (100 senators, 50 states). Most recently updated 2026-08-19: (1) campaign editorial review reclassified Fetterman, Cornyn, Hirono, Hickenlooper, and Gallego to Opposes, overriding the source workbook's 'Hold — unresolved lead' / 'Unclear' classifications; (2) 13 additional senators (Blumenthal, Blunt Rochester, Booker, Coons, A. Kim, Luján, Markey, Merkley, Reed, Rosen, Sanders, Duckworth, Gillibrand) reclassified to Opposes per campaign report of a joint multi-senator letter opposing the executive order — no public copy of that letter was available at update time, so those records carry no source link. There is no 'unclear' or 'under review' public state on this tracker by design — every senator is Supports, Opposes, or No public stance identified. Photos via the unitedstates/images public congressional photo mirror (same open-data family congress/data/ already uses); senators without a mirrored photo yet fall back to the initial-letter placeholder. demo = fictional placeholder entries used only to preview the 'supports' badge layout. Do not treat demo entries as real senators.",
+  "generatedAt": "2026-09-12",
+  "note": "states = real U.S. Senate data (100 senators, 50 states). Most recently updated 2026-08-19: (1) campaign editorial review reclassified Fetterman, Cornyn, Hirono, Hickenlooper, and Gallego to Opposes, overriding the source workbook's 'Hold — unresolved lead' / 'Unclear' classifications; (2) 13 additional senators (Blumenthal, Blunt Rochester, Booker, Coons, A. Kim, Luján, Markey, Merkley, Reed, Rosen, Sanders, Duckworth, Gillibrand) reclassified to Opposes per campaign report of a joint multi-senator letter opposing the executive order — no public copy of that letter was available at update time, so those records carry no source link. Updated 2026-09-12: (3) six additional senators (Schiff, Smith, Van Hollen, Warnock, Warren, Welch) reclassified from No public stance to Opposes per campaign editorial direction supplied alongside the House position dataset — no public source link was provided, so those records carry none. There is no 'unclear' or 'under review' public state on this tracker by design — every senator is Supports, Opposes, or No public stance identified. Photos via the unitedstates/images public congressional photo mirror (same open-data family congress/data/ already uses); senators without a mirrored photo yet fall back to the initial-letter placeholder. demo = fictional placeholder entries used only to preview the 'supports' badge layout. Do not treat demo entries as real senators.",
   "states": {
     "AK": {
       "stateName": "Alaska",
@@ -142,14 +142,14 @@
           "name": "Adam Schiff",
           "party": "D",
           "photoUrl": "https://unitedstates.github.io/images/congress/225x275/S001150.jpg",
-          "stance": "no_stance",
+          "stance": "opposes",
           "rfkVote": "no",
           "statementDate": null,
           "statementSummary": null,
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
+          "verificationNote": "Classified as Opposes per campaign editorial direction (2026-09-12), supplied with the House position dataset. No public source link was provided with that direction, so this record carries none; prior audit passes located no attributable EO-specific position."
         },
         {
           "bioguide": "P000145",
@@ -326,14 +326,14 @@
           "name": "Raphael Warnock",
           "party": "D",
           "photoUrl": "https://unitedstates.github.io/images/congress/225x275/W000790.jpg",
-          "stance": "no_stance",
+          "stance": "opposes",
           "rfkVote": "no",
           "statementDate": null,
           "statementSummary": null,
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
+          "verificationNote": "Classified as Opposes per campaign editorial direction (2026-09-12), supplied with the House position dataset. No public source link was provided with that direction, so this record carries none; prior audit passes located no attributable EO-specific position."
         }
       ]
     },
@@ -623,14 +623,14 @@
           "name": "Elizabeth Warren",
           "party": "D",
           "photoUrl": "https://unitedstates.github.io/images/congress/225x275/W000817.jpg",
-          "stance": "no_stance",
+          "stance": "opposes",
           "rfkVote": "no",
           "statementDate": null,
           "statementSummary": null,
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
+          "verificationNote": "Classified as Opposes per campaign editorial direction (2026-09-12), supplied with the House position dataset. No public source link was provided with that direction, so this record carries none; prior audit passes located no attributable EO-specific position."
         }
       ]
     },
@@ -656,14 +656,14 @@
           "name": "Chris Van Hollen",
           "party": "D",
           "photoUrl": "https://unitedstates.github.io/images/congress/225x275/V000128.jpg",
-          "stance": "no_stance",
+          "stance": "opposes",
           "rfkVote": "no",
           "statementDate": null,
           "statementSummary": null,
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
+          "verificationNote": "Classified as Opposes per campaign editorial direction (2026-09-12), supplied with the House position dataset. No public source link was provided with that direction, so this record carries none; prior audit passes located no attributable EO-specific position."
         }
       ]
     },
@@ -755,14 +755,14 @@
           "name": "Tina Smith",
           "party": "D",
           "photoUrl": "https://unitedstates.github.io/images/congress/225x275/S001203.jpg",
-          "stance": "no_stance",
+          "stance": "opposes",
           "rfkVote": "no",
           "statementDate": null,
           "statementSummary": null,
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
+          "verificationNote": "Classified as Opposes per campaign editorial direction (2026-09-12), supplied with the House position dataset. No public source link was provided with that direction, so this record carries none; prior audit passes located no attributable EO-specific position."
         }
       ]
     },
@@ -1514,14 +1514,14 @@
           "name": "Peter Welch",
           "party": "D",
           "photoUrl": "https://unitedstates.github.io/images/congress/225x275/W000800.jpg",
-          "stance": "no_stance",
+          "stance": "opposes",
           "rfkVote": "no",
           "statementDate": null,
           "statementSummary": null,
           "sourceUrl": null,
           "secondarySourceUrl": null,
           "evidenceConfidence": null,
-          "verificationNote": "Two-pass audit completed; no attributable EO-specific position was located as of the audit cutoff."
+          "verificationNote": "Classified as Opposes per campaign editorial direction (2026-09-12), supplied with the House position dataset. No public source link was provided with that direction, so this record carries none; prior audit passes located no attributable EO-specific position."
         }
       ]
     },
