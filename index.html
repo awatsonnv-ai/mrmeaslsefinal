@@ -44,6 +44,11 @@
      Dashboard at cloud.umami.is. Blocked by most content blockers, so treat the
      numbers as a floor, not a census. -->
 <script defer src="https://cloud.umami.is/script.js" data-website-id="41662ad1-eda3-4e7f-8702-449661ec2607"></script>
+<!-- Section pageviews and action events on top of the tracker above. Umami
+     derives bounce rate and visit duration from pageviews only, and this is a
+     one-page site, so without this every visit is a bounce by construction.
+     See the header of analytics.js before comparing to pre-deploy numbers. -->
+<script defer src="./analytics.js"></script>
 </head>
 <body>
 <x-dc>
