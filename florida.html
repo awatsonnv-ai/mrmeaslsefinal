@@ -163,19 +163,13 @@ select:focus,input:focus,textarea:focus{outline:1.31px solid #F2C338}
 
 
 
-<section id="eo" style="position:relative;color:#ffffff;overflow:hidden">
-  <img data-parallax="0.12" src="assets/whitehouse.jpg" alt="The White House" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.15);will-change:transform">
-  <div style="position:absolute;inset:0;background:linear-gradient(rgba(10,10,10,0.55),rgba(10,10,10,0.25) 55%,rgba(10,10,10,0.55))"></div>
-  <div style="position:relative;min-height:315px;padding:63px var(--gutter);display:flex;flex-direction:column;justify-content:space-between;gap:36.75px">
-    <div style="font-family:'Knockout30',Impact,sans-serif;font-size:clamp(23px,5.38vw,86.63px);line-height:1.16">
-      <x-justify>FROM THE WHITE HOUSE TO</x-justify>
-      <x-justify>YOUR HOUSE — MORE MEASLES.</x-justify>
-    </div>
-    <p style="margin: 0; font-family: 'Knockout30',Impact,sans-serif; font-size: clamp(25.2px,2.5vw,34.65px); letter-spacing: 2.63px; line-height: 1.5; text-align: justify; text-align-last: justify; text-transform: uppercase">Have you heard the good news? Measles is now practically government-issued. Trump's new Executive Order protects me and my campaign to infect your kids. It sure is nice to have connections.</p>
-    <div style="font-family:'Knockout30',Impact,sans-serif;font-size:clamp(23px,5.38vw,86.63px);line-height:1.16;margin-top:26.25px">
-      <x-justify>SEE YOU SOON!</x-justify>
-    </div>
-  </div>
+<section id="eo" style="position:relative;overflow:hidden">
+  <!-- Flattened design asset (text baked into the image, sourced from Downloads/MM_FL.png,
+       resized to 2400px wide and re-encoded as JPEG q90 — see assets/eo-fl-classroom.jpg)
+       rather than the live x-justify headline + photo treatment every other section uses.
+       Trade-off: the copy here doesn't reflow or resize independently of the photo, so on
+       narrow phones it shrinks along with the image instead of re-wrapping at a legible size. -->
+  <img src="assets/eo-fl-classroom.jpg" alt="From the Florida statehouse to your house — more measles! Great news! Florida politicians are challenging Catholic schools' vaccination policies. Amazing! Could be hanging out with your kids real soon! See you in school!" style="display:block;width:100%;height:auto">
 </section>
 
 <section id="tracker" style="background:#111111;padding:63px var(--gutter);display:flex;flex-direction:column;gap:36.75px">
