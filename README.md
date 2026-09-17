@@ -9,6 +9,7 @@ Consumer. Deployed by Vercel from `main` — pushing to `main` publishes.
 |---|---|
 | `index.html` | The whole page. Styles are inline; the `<style>` block in `<helmet>` holds only shared tokens and media queries. |
 | `support.js` | Design-canvas runtime. Renders the `<x-dc>` template with React and drives `{{ }}` bindings, `<sc-if>` and `<sc-for>`. Do not edit — generated. |
+| `analytics.js` | Section pageviews and action events for Umami. See "Analytics" below — read it before comparing numbers across 2026-09-17. |
 | `justify.js` | `<x-justify>`, the force-justified wood-type line. Splits text into one span per letter (or per word with `mode="words"`). |
 | `usmap.js` | `<us-measles-map>`, the D3 choropleth. Shades states from `data/measles-stats.json`. |
 | `senatemap.js` | `<senate-tracker-map>`, the D3 US map in the ZIP lookup. Display only — the ZIP form drives the highlight, nothing here is clickable. |
@@ -121,6 +122,67 @@ workbook shows you exactly what moved.
   carries a `note` field recording which senators were classified by campaign
   direction rather than a public source, and which of those have no source link.
   Read it before quoting the tally.
+
+## Analytics
+
+Umami, loaded in `<head>` on both pages, plus `analytics.js` on top of it.
+
+### Why analytics.js exists
+
+Umami derives **bounce rate and visit duration from pageview events only** —
+custom events feed neither. On a one-page site whose nav is all in-page
+anchors, that means one pageview per visit and therefore a bounce rate pinned
+near 100% no matter how engaged anyone is. It read 82–83% over the first three
+days, with most visits recorded at 0s.
+
+`analytics.js` sends a pageview when a section holds the middle of the viewport
+for a second (`/#about`, `/#eo`, `/#tracker`, `/#citations`, `/#map`, `/#cyr`),
+so bounce and duration measure how far people actually get. It also sends named
+custom events for what a visitor can do. The events are the detail; only the
+pageviews move bounce rate.
+
+### The baseline break
+
+**Numbers before and after 2026-09-17 are not comparable.** Views counted page
+loads (~1.3 per visit) and now counts page loads plus sections reached, so
+expect roughly 3–5x. Bounce rate will fall a long way. Nothing about the
+audience changed. Any chart spanning that date is two different measures.
+
+### Events
+
+| Event | Fires when | Data |
+|---|---|---|
+| `nav_click` | An in-page nav anchor is clicked | `to` — the section id |
+| `cta_take_action` | The TAKE ACTION button is clicked | `from` — `nav` or `body` |
+| `outbound_click` | A link to another domain is clicked | `host` |
+| `social_click` | A Facebook, Instagram or X link is clicked | `network` |
+| `press_email` | The press mailto is clicked | — |
+| `zip_lookup` | The ZIP form is submitted | — (no ZIP, by decision) |
+| `music_toggle` | The music button is clicked | `action` — `play` or `pause` |
+| `popup_dismiss` | The first-visit popup is closed | `via` — `close` or `skip` |
+| `advocacy_start` | First focus inside a Speak4 form | `placement` — `inline` or `popup` |
+| `advocacy_submit` | A Speak4 form is submitted | `placement` |
+| `advocacy_complete` | The Speak4 form reports success | `placement` |
+
+### Privacy
+
+No field value is read or sent, ever. The advocacy form collects names, emails,
+phone numbers and addresses; none of it reaches analytics. We record that a
+submission happened and where on the page, never who or what. That is what
+keeps the cookieless, no-consent-banner position the tracker comment in
+`index.html` claims. Keep it that way: no `.value`, no `FormData`, no input
+contents.
+
+### Known gap
+
+`advocacy_complete` is **unverified**. Confirming it needs one real submission,
+and the form contacts an actual legislator, so it was not something to test
+speculatively. It watches the embed for the form being torn down or a
+success-shaped node appearing. Submit once with your own details, watch Umami's
+realtime view, and adjust `SUCCESS_HINT` in `analytics.js` if nothing fires.
+The embed renders `speak4-embed__bread` elements that look like a step
+indicator — if the flow has more than one step, this may be firing on step two
+rather than on completion.
 
 ## Local preview
 
