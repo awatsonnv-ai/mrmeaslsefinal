@@ -360,7 +360,7 @@ select:focus,input:focus,textarea:focus{outline:1.31px solid #F2C338}
 
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;tickerSpeed&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:40,&quot;min&quot;:15,&quot;max&quot;:90,&quot;step&quot;:5,&quot;unit&quot;:&quot;s&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Ticker&quot;},&quot;mapSmiley&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Outbreak map&quot;}}">
-const MEASLES_FALLBACK = {"casesTotal":"3,568","jurisdictions":"45","epicenterCases":"767","epicenterState":"PENNSYLVANIA","prevCasesTotal":"2,286","prevJurisdictions":"45"}; // updated by scripts/update-measles-data.mjs
+const MEASLES_FALLBACK = {"casesTotal":"3,782","jurisdictions":"45","epicenterCases":"890","epicenterState":"PENNSYLVANIA","prevCasesTotal":"2,286","prevJurisdictions":"45"}; // updated by scripts/update-measles-data.mjs
 class Component extends DCLogic {
   componentDidMount() {
     if (!localStorage.getItem('mm_popup_seen')) this.setState({ popupOpen: true });
