@@ -166,12 +166,37 @@ audience changed. Any chart spanning that date is two different measures.
 
 ### Privacy
 
-No field value is read or sent, ever. The advocacy form collects names, emails,
-phone numbers and addresses; none of it reaches analytics. We record that a
-submission happened and where on the page, never who or what. That is what
-keeps the cookieless, no-consent-banner position the tracker comment in
-`index.html` claims. Keep it that way: no `.value`, no `FormData`, no input
-contents.
+**No field value is read or sent, ever.** The advocacy form collects names,
+emails, phone numbers and addresses; none of it reaches analytics. We record that
+a submission happened and where on the page, never who or what. Keep it that way:
+no `.value`, no `FormData`, no input contents. This rule is absolute and applies
+to every tag on the page, including the ad pixel below.
+
+**What each tag does is now different, and the old blanket claim no longer
+holds.** Through 2026-09-29 this site carried one tracker, Umami, and the README
+and page comments described the whole site as cookieless with no consent banner
+required. That is no longer accurate. As of 2026-09-30 three things run on
+`index.html`, `florida.html` and `maine.html`:
+
+| Tag | What it is | Identifiers / cross-site |
+|---|---|---|
+| Umami (`cloud.umami.is`) | Pageviews, referrers, country. Plus `analytics.js` section views and action events. | No. Cookieless, no cross-site tracking. |
+| Google Tag Manager (`GTM-MQHM373N`) | A container. Collects nothing itself; loads whatever tags are configured in the GTM console. | Depends entirely on what is in the container — audit there, not here. |
+| X pixel (ad account `rg6b1`) | Advertising. Conversion attribution and retargeting audiences for X ads. | **Yes.** Tags visitors with an identifier; this is cross-site tracking by design. |
+
+Consequences worth being deliberate about:
+
+- The "cookieless, no consent banner needed" position rested on Umami being the
+  only tracker. It does not follow from the current stack. Whether a consent
+  mechanism is now required is a question for the client and their counsel, not
+  something this file should assert either way.
+- The X pixel is hard-coded in the three pages rather than deployed through GTM,
+  even though X generated the snippet for GTM (`twq.integration='gtm-ad-manager'`).
+  **Do not also add it as a Custom HTML tag in the container** — it would fire
+  twice, double-counting conversions and inflating audiences.
+- Anything added to the GTM container is invisible in this repo. If you are
+  auditing what actually fires on the site, the container is the other half of
+  the answer.
 
 ### Known gap
 
