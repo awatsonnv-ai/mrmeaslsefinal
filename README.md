@@ -181,7 +181,7 @@ required. That is no longer accurate. As of 2026-09-30 three things run on
 | Tag | What it is | Identifiers / cross-site |
 |---|---|---|
 | Umami (`cloud.umami.is`) | Pageviews, referrers, country. Plus `analytics.js` section views and action events. | No. Cookieless, no cross-site tracking. |
-| Google Tag Manager (`GTM-MQHM373N`) | A container. Collects nothing itself; loads whatever tags are configured in the GTM console. | Depends entirely on what is in the container — audit there, not here. |
+| Google Tag Manager (`GTM-TWTRGHR3`) | A container. Collects nothing itself; loads whatever tags are configured in the GTM console. | Depends entirely on what is in the container — audit there, not here. |
 | X pixel (ad account `rg6b1`) | Advertising. Conversion attribution and retargeting audiences for X ads. | **Yes.** Tags visitors with an identifier; this is cross-site tracking by design. |
 
 Consequences worth being deliberate about:
