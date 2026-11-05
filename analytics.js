@@ -121,7 +121,15 @@
 
   // `hero` is deliberately absent: the page load already counts as the entry
   // pageview, and firing it again would duplicate the landing row.
+  // Union of the section ids across every page this file loads on. A page only
+  // has some of them; getElementById returns null for the rest and they are
+  // skipped, so adding ids here is safe for the pages that lack them.
+  // index.html (ACIP reskin): why, nominate, cv, map, citations
+  // florida.html / maine.html: about, eo, tracker, citations, map, cyr
   var SECTIONS = {
+    why: 'Why I am running',
+    nominate: 'Nominate',
+    cv: 'Curriculum vitae',
     about: 'About Mr. Measles',
     eo: 'Executive order',
     tracker: 'Where your rep stands',

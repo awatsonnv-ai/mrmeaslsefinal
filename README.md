@@ -7,12 +7,12 @@ Consumer. Deployed by Vercel from `main` — pushing to `main` publishes.
 
 | Path | What it is |
 |---|---|
-| `index.html` | The whole page. Styles are inline; the `<style>` block in `<helmet>` holds only shared tokens and media queries. |
+| `index.html` | The whole page — "Mr. Measles for ACIP" since the 2026-11-05 reskin. Styles are inline; the `<style>` block in `<helmet>` holds only shared tokens and media queries. |
+| `data/elim-status.json` | The elimination-status takeover switch. See "Elimination-status switch" below. |
 | `support.js` | Design-canvas runtime. Renders the `<x-dc>` template with React and drives `{{ }}` bindings, `<sc-if>` and `<sc-for>`. Do not edit — generated. |
 | `analytics.js` | Section pageviews and action events for Umami. See "Analytics" below — read it before comparing numbers across 2026-09-17. |
 | `justify.js` | `<x-justify>`, the force-justified wood-type line. Splits text into one span per letter (or per word with `mode="words"`). |
 | `usmap.js` | `<us-measles-map>`, the D3 choropleth. Shades states from `data/measles-stats.json`. |
-| `senatemap.js` | `<senate-tracker-map>`, the D3 US map in the ZIP lookup. Display only — the ZIP form drives the highlight, nothing here is clickable. |
 | `vendor/` | React, ReactDOM, d3 and topojson, served locally so the page makes no CDN calls. |
 | `data/` | `measles-stats.json` (generated), `eo-tracker-senators.json`, `house-members.json` (generated), `zips/` (generated), `states-10m.json`. |
 | `images/house/` | House portraits, one per filled seat (generated). |
@@ -122,6 +122,47 @@ workbook shows you exactly what moved.
   carries a `note` field recording which senators were classified by campaign
   direction rather than a public source, and which of those have no source link.
   Read it before quoting the tally.
+
+## The ACIP reskin (2026-11-05)
+
+`index.html` was reskinned from "Mr. Measles 2026" to "Mr. Measles for ACIP."
+Section order is now: sticky header (status bar + nav + ticker) -> hero -> Why I'm
+running (`#why`) -> Nominate (`#nominate`) -> CV (`#cv`) -> outbreak map (`#map`) ->
+My numbers -> In the news (`#citations`) -> footer.
+
+**Removed:** the executive-order ZIP tracker and `senatemap.js`. The tracker's data
+files are NOT deleted — `data/eo-tracker-senators.json`, `data/house-members.json`
+and `data/zips/` are still fetched by `florida.html` and `maine.html`.
+
+**Speak4** is campaign `x101vsbj`, mounted in two containers on one page
+(`#speak4-embed` in the Nominate card, `#popup-speak4-embed` in the first-visit
+popup). Both instances were tested together and render independently. The email
+copy lives in the Speak4 dashboard, not here. The popup's localStorage key changed
+to `mm_acip_popup_seen`, so visitors who dismissed the old popup see this one once.
+
+### Elimination-status switch
+
+One value drives four things: the yellow bar above the nav, ticker item 1, the
+"WHY IT MATTERS" phrase, and the 2026 row in "MY NUMBERS."
+
+Edit `elimDay` in `data/elim-status.json` to one of `"Off"`, `"Status lost"` or
+`"Status kept"`. It is fetched at runtime, so flipping it needs no code change —
+but it is still a file in the repo, so committing it triggers a Vercel deploy
+(roughly a minute). There is no way to change it without a deploy on a static host.
+
+To preview without editing anything, append `?elim=lost`, `?elim=kept` or
+`?elim=off` to any URL. The query parameter wins over the file.
+
+**The Speak4 email has its own elimination-status line and this switch does not
+reach it.** If the status flips, update the email copy by hand in the Speak4
+dashboard as well.
+
+### Two stats on this page are not live
+
+The map panel's **94% outbreak-associated** and My Numbers' **90% unvaccinated**
+are hardcoded, for the reasons in "What is deliberately hardcoded" above. The other
+four figures in the map panel and My Numbers are live. A reader cannot tell the
+difference, and 94% has no recorded source — see that section before reusing it.
 
 ## Analytics
 
