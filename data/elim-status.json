@@ -1,0 +1,4 @@
+{
+  "elimDay": "Off",
+  "_comment": "Drives the status bar, ticker item 1, the WHY IT MATTERS phrase and the 2026 row in MY NUMBERS on index.html. Allowed values: \"Off\" | \"Status lost\" | \"Status kept\". Edit this one value to flip the page; no code change needed. Append ?elim=lost or ?elim=kept to any URL to preview a state without editing. The Speak4 email copy has its own elimination line and must be updated separately in the Speak4 dashboard."
+}
