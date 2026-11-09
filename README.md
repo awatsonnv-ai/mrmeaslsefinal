@@ -134,11 +134,26 @@ My numbers -> In the news (`#citations`) -> footer.
 files are NOT deleted — `data/eo-tracker-senators.json`, `data/house-members.json`
 and `data/zips/` are still fetched by `florida.html` and `maine.html`.
 
-**Speak4** is campaign `x101vsbj`, mounted in two containers on one page
+**Speak4** is campaign `xk01snnj`, mounted in two containers on one page
 (`#speak4-embed` in the Nominate card, `#popup-speak4-embed` in the first-visit
 popup). Both instances were tested together and render independently. The email
 copy lives in the Speak4 dashboard, not here. The popup's localStorage key changed
 to `mm_acip_popup_seen`, so visitors who dismissed the old popup see this one once.
+
+### The state pages are retired (2026-11-09)
+
+`/florida` and `/maine` were unlisted QR destinations for two state fights that
+have since passed. Both now 307-redirect to `/` in `vercel.json`. The redirect is
+temporary on purpose: QR graphics are already in circulation, so the routes must
+not 404, and the pages come back by deleting two lines.
+
+`florida.html` and `maine.html` are still in the repo, unchanged, along with their
+Speak4 campaigns (`6q015n94` Florida state lawmakers, `3301fs4e` Maine) and their
+own Umami properties. Nothing was deleted, so the tracker data files those pages
+fetch are still required. Neither page was ever in `sitemap.xml`.
+
+Note that `cleanUrls` already 308s `/florida.html` to `/florida`, which then hits
+the redirect, so the `.html` paths are covered too.
 
 ### Elimination-status switch
 

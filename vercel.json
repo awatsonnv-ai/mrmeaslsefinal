@@ -1,3 +1,7 @@
 {
-  "cleanUrls": true
+  "cleanUrls": true,
+  "redirects": [
+    { "source": "/florida", "destination": "/", "permanent": false },
+    { "source": "/maine", "destination": "/", "permanent": false }
+  ]
 }
